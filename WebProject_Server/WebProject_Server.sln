@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProject", "WebProject\WebProject.csproj", "{11CE5BD2-0F9A-49B4-B232-191842899090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentsCore", "ApartmentsCore\ApartmentsCore.csproj", "{1142D89D-4AF0-4E50-9E42-D19228130D97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11CE5BD2-0F9A-49B4-B232-191842899090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CE5BD2-0F9A-49B4-B232-191842899090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CE5BD2-0F9A-49B4-B232-191842899090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CE5BD2-0F9A-49B4-B232-191842899090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1142D89D-4AF0-4E50-9E42-D19228130D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1142D89D-4AF0-4E50-9E42-D19228130D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1142D89D-4AF0-4E50-9E42-D19228130D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1142D89D-4AF0-4E50-9E42-D19228130D97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
