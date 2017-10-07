@@ -5,9 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ApartmentsCore;
+using System.Web.Http.Cors;
 
 namespace WebProject.Controllers
 {
+  //  [EnableCorsAttribute("http://localhost:50743", "*", "*")
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AuthenticationController : ApiController
     {
         //Register
@@ -17,11 +20,11 @@ namespace WebProject.Controllers
         [HttpPost, Route("api/authentication")]
         public IHttpActionResult Post([FromBody]User user)
         {
-            if(user == null)
+            if (user == null)
             {
                 return BadRequest("User can't be Null");
             }
-            
+
             try
             {
                 var s = new ApartmentService();
@@ -32,7 +35,8 @@ namespace WebProject.Controllers
                 return Conflict();
             }
 
-            return Created<User>(Request.RequestUri + user.Id.ToString(), user);
+            // return Created<User>(Request.RequestUri + user.Id.ToString(), user);
+            return Ok(user);
         }
 
 
@@ -42,7 +46,7 @@ namespace WebProject.Controllers
         {
             var s = new ApartmentService();
 
-            if(!s.CheckIfValidLogin(username, password))
+            if (!s.CheckIfValidLogin(username, password))
             {
                 return NotFound();
             }
@@ -52,17 +56,18 @@ namespace WebProject.Controllers
         [HttpPut, Route("api/authentication")]
         public IHttpActionResult Put([FromBody]User user, string newPassword)
         {
-            if(user==null || String.IsNullOrEmpty(newPassword))
+            if (user == null || String.IsNullOrEmpty(newPassword))
             {
                 return BadRequest("user and newPassword cant be empty");
             }
             var s = new ApartmentService();
-            if(s.ChangePassword(user, newPassword))
+            if (s.ChangePassword(user, newPassword))
             {
                 return Ok();
-            } else {
-                return NotFound();
             }
+
+            return NotFound();
+
         }
     }
 }
