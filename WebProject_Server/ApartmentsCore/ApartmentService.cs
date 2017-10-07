@@ -13,14 +13,13 @@ namespace ApartmentsCore
         public bool CheckIfValidLogin(string username, string password)
         {
             using (var db = new ApartmentsAppContext())
+            if (db.Users.Any(c => c.Username == username && c.Password == password))
             {
-                if (db.Users.Any(c => c.Username == username && c.Password == password))
-                {
-                    return true;
-                }
-                return false;
+                return true;
             }
+            return false;
         }
+        
 
         public void RegisterUser(User user)
         {
