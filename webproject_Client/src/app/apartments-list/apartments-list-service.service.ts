@@ -8,18 +8,19 @@ import 'rxjs/add/operator/catch'
 @Injectable()
 export class ApartmentsListServiceService {
   public url = 'http://localhost:50743/api/apartments';
-
-  constructor(private _httpClient: HttpClient) { }
+  constructor(private _httpClient: HttpClient) {
+  }
 
 
   public getApartments(): Observable<any> {
+
   //  let httpheaders = new HttpHeaders();
   //  httpheaders.set('Content-Type', 'application/json');
   //  httpheaders.set('Accept','*/*');
   return this._httpClient.get(this.url, {
   //  params: params,
   //   headers: new HttpHeaders().set('Content-Type', 'application/x-whww-form-urlencoded; carset=UTF-8'),
-}).map((result: Response) => {
+}).map((result: IApartment[]) => {
     const data = result;
     return data;
   }).catch(this.handleError);

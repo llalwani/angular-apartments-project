@@ -3,12 +3,23 @@
     <!--{{pageTitle}}-->
   <!--</div>-->
   <div class='panel-body'>
-    <!--<div class='row'>-->
-      <!--<div class='col-md-2'>Filter by:</div>-->
+    <div class='row'>
+      <div class='col-md-7'>Filter by:
       <!--<div class='col-md-4'>-->
-        <!--<input type='text' [(ngModel)]='listFilter' />-->
+        <input type='text' [(ngModel)]='listFilter' style="margin-left: 60px"/>
       <!--</div>-->
-    <!--</div>-->
+      </div>
+    </div>
+    <div class="row">
+    <div class='col-md-7'>
+      Sort by:
+      <div class="btn-group btn-group-sm" style="margin-left: 65px;">
+        <button class="btn btn-default" [class.active] = "sortBy==='none'" (click)="changeSorting('none');">None</button>
+        <button class="btn btn-default" [class.active] = "sortBy ==='price'" (click)="changeSorting('price');">Price</button>
+
+      </div>
+    </div>
+    </div>
     <!--<div class='row'>-->
       <!--<div class='col-md-6'>-->
         <!--<h3>Filtered by: {{listFilter}} </h3>-->
@@ -31,7 +42,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor='let apartment of apartments'>
+        <tr *ngFor='let apartment of filteredApartments'>
           <!--<td>-->
             <!--<img *ngIf='showImage'-->
                  <!--[src]='product.imageUrl'-->
@@ -45,7 +56,7 @@
           <!--</td>-->
           <td><a [routerLink]="['/apartments', apartment.Id]">{{ apartment.Address }}</a></td>
           <td>{{ apartment.Description | lowercase }}</td>
-          <td>{{ apartment.Price | currency:'USD':true:'1.2-2'}}</td>
+          <td>{{ apartment.Price | currency:'ILS':true:'1.2-2'}}</td>
         </tr>
         </tbody>
       </table>
