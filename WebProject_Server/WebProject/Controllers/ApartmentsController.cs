@@ -11,7 +11,7 @@ namespace WebProject.Controllers
     public class ApartmentsController : ApiController
     {
         [HttpGet, Route("api/apartments")]
-        public IEnumerable<Apartment> Get(string username, string password)
+        public IEnumerable<Apartment> Get()
         {
             var s = new ApartmentService();
             return s.LoadApartments();

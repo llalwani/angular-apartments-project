@@ -6,7 +6,7 @@ import {HttpClient, HttpHeaders, HttpParams, HttpResponse} from "@angular/common
 export class LoginService {
 
   public url = 'http://localhost:50743/api/authentication';
-  constructor(private http: HttpClient) { }
+  constructor(private _httpClient: HttpClient) { }
 
 
   login(username: string, password: string): Observable<any> {
@@ -16,7 +16,7 @@ export class LoginService {
   //  let httpheaders = new HttpHeaders();
   //  httpheaders.set('Content-Type', 'application/json');
   //  httpheaders.set('Accept','*/*');
-    return this.http.get(this.url + '?username='+ username + '&password='+password, {
+    return this._httpClient.get(this.url + '?username='+ username + '&password='+password, {
     //  params: params,
    //   headers: new HttpHeaders().set('Content-Type', 'application/x-whww-form-urlencoded; carset=UTF-8'),
     }).map((result: Response) => result.json());
