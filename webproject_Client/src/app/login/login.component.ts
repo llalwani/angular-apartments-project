@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from "./login.service";
+import {AuthService} from "../shared/auth.service";
 import {Router} from "@angular/router";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [LoginService]
+  providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
 
   private username: string;
   private password: string;
   isValidLogin: boolean = true;
-  constructor(private _loginService: LoginService,
+  constructor(private _loginService: AuthService,
               private router: Router) { }
 
    performLogin() {

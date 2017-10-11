@@ -16,7 +16,6 @@ export class ApartmentsListComponent implements OnInit {
 
   _listFilter: string;
   sortBy: string;
-
   get listFilter(): string {
     return this._listFilter;
   }

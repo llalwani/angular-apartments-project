@@ -6,6 +6,10 @@
         <li><a [routerLink]="['/welcome']">Home</a></li>
         <li><a [routerLink]="['/apartments']">Apartments List</a></li>
       </ul>
+      <div *ngIf="currentUser">
+      <p class="navbar-text navbar-right"><button (click)="logout()" class="btn btn-default">Log-out</button></p>
+      <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">{{currentUser}}</a></p>
+    </div>
     </div>
   </nav>
 </div>

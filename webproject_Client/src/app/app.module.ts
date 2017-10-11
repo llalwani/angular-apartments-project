@@ -10,12 +10,8 @@ import {HttpClientModule} from "@angular/common/http";
 import { ApartmentsListComponent } from './apartments-list/apartments-list.component';
 import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
 
-const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'apartments', component: ApartmentsListComponent},
-  { path: 'apartments/:id', component: ApartmentDetailsComponent},
-  { path: '', redirectTo: 'login', pathMatch: 'full'}
-];
+import {routing} from './app.routing'
+import {AuthGuard} from "./guards/auth.guard";
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +22,11 @@ const appRoutes: Routes = [
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    routing,
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

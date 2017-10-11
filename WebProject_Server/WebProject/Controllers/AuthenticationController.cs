@@ -25,7 +25,7 @@ namespace WebProject.Controllers
             {
                 return NotFound();
             }
-            return Ok();
+            return Ok(username);
         }
         //http://localhost:64014a/pi/authentication
         [HttpPost, Route("api/authentication")]
