@@ -17,6 +17,13 @@ namespace WebProject.Controllers
             return s.LoadApartments();
         }
 
+        [HttpGet, Route("api/apartments")]
+        public Apartment Get(int id)
+        {
+            var s = new ApartmentService();
+            return s.LoadApartment(id);
+        }
+
         [HttpPost, Route("api/apartments")]
         public IHttpActionResult Post(Apartment apartment)
         {

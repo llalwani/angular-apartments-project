@@ -43,7 +43,7 @@
             <!--{{ product.productName }}-->
           <!--</a>-->
           <!--</td>-->
-          <td>{{ apartment.Address }}</td>
+          <td><a [routerLink]="['/apartments', apartment.Id]">{{ apartment.Address }}</a></td>
           <td>{{ apartment.Description | lowercase }}</td>
           <td>{{ apartment.Price | currency:'USD':true:'1.2-2'}}</td>
         </tr>

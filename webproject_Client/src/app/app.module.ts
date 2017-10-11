@@ -8,17 +8,20 @@ import { AlertModule } from 'ngx-bootstrap';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ApartmentsListComponent } from './apartments-list/apartments-list.component';
+import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'apartments', component: ApartmentsListComponent},
+  { path: 'apartments/:id', component: ApartmentDetailsComponent},
   { path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ApartmentsListComponent
+    ApartmentsListComponent,
+    ApartmentDetailsComponent
   ],
   imports: [
     AlertModule.forRoot(),

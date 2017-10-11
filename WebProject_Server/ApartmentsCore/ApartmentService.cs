@@ -94,6 +94,16 @@ namespace ApartmentsCore
             }
         }
 
+        public Apartment LoadApartment(int id)
+        {
+            using (var db = new ApartmentsAppContext())
+            {
+                Apartment resultApartment = db.Apartments.Where(apartment => apartment.Id == id).FirstOrDefault();
+
+
+                return resultApartment;
+            }
+        }
         public bool DeleteApartment(Apartment Apartment)
         {
             using (var db = new ApartmentsAppContext())
