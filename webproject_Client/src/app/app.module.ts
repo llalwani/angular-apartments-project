@@ -12,12 +12,14 @@ import { ApartmentDetailsComponent } from './apartment-details/apartment-details
 
 import {routing} from './app.routing'
 import {AuthGuard} from "./guards/auth.guard";
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ApartmentsListComponent,
-    ApartmentDetailsComponent
+    ApartmentDetailsComponent,
+    RegisterComponent
   ],
   imports: [
     AlertModule.forRoot(),

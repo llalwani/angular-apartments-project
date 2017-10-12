@@ -25,7 +25,7 @@ namespace ApartmentsCore
         {
             using (var db = new ApartmentsAppContext())
             {
-                if (db.Users.Any(u => u.Username == user.Username || u.Email == user.Email))
+                if (db.Users.Any(u => u.Username == user.Username ))
                 {
                     throw new UserNameOrEmailAlreadyExistsException();
                 }

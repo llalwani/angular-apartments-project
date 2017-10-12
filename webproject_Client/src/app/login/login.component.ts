@@ -9,21 +9,21 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  private username: string;
-  private password: string;
-  isValidLogin: boolean = true;
+  model: any = {};
+  loading = false;
+
   constructor(private _loginService: AuthService,
               private router: Router) { }
 
-   performLogin() {
-    this._loginService.login(this.username, this.password).subscribe((response) => {
+   login() {
+     this.loading = true;
+     this._loginService.login(this.model.username, this.model.password).subscribe((response) => {
         console.log('not error' + response);
         this.router.navigate(['/apartments']);
       },
         (error) => {
           console.log('error' + error);
-          this.isValidLogin = false;
-
+          this.loading = false;
     });
   }
 

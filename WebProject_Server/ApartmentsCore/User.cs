@@ -26,10 +26,10 @@ namespace ApartmentsCore
         public string LastName { get; set; }
 
 
-        [DataMember]
-        [StringLength(50)]
-        [Index(IsUnique = true)]
-        public string Email { get; set; }
+        //[DataMember]
+        //[StringLength(50)]
+        //[Index(IsUnique = true)]
+        //public string Email { get; set; }
 
         public virtual ICollection<Apartment> Apartments { get; set; }
     }
