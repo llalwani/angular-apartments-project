@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c54ac0-0990-4b2e-8133-cc08738431e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts" afterPath="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/apartments-list/apartments-list-service.service.ts" afterPath="$PROJECT_DIR$/src/app/apartments-list/apartments-list-service.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.html" afterPath="$PROJECT_DIR$/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.routing.ts" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/shared/auth.service.ts" afterPath="$PROJECT_DIR$/src/app/shared/auth.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -21,21 +20,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="add-apartment.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts">
+      <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/shared/auth.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="275">
+              <caret line="18" column="88" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apartments-list-service.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list-service.service.ts">
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="100">
+              <caret line="4" column="111" lean-forward="false" selection-start-line="4" selection-start-column="111" selection-end-line="4" selection-end-column="111" />
+              <folding>
+                <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#header#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#header#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-apartments.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-apartments.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/my-apartments/my-apartments.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -43,14 +67,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <file leaf-file-name="my-apartments.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="275">
+              <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/login/login.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,18 +146,21 @@
         <option value="$PROJECT_DIR$/src/app/alert/alert.component.html" />
         <option value="$PROJECT_DIR$/src/app/alert/alert.service.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/shared/auth.service.ts" />
         <option value="$PROJECT_DIR$/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/src/app/register/register.component.ts" />
         <option value="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts" />
         <option value="$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts" />
         <option value="$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.html" />
         <option value="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.html" />
-        <option value="$PROJECT_DIR$/src/app/app.routing.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts" />
         <option value="$PROJECT_DIR$/src/app/apartments-list/apartments-list-service.service.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.routing.ts" />
+        <option value="$PROJECT_DIR$/src/app/shared/auth.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/my-apartments/my-apartments.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.html" />
       </list>
     </option>
   </component>
@@ -186,13 +221,6 @@
               <item name="webproject_Client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="apartment-details" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webproject_Client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webproject_Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,7 +228,7 @@
               <item name="webproject_Client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="my-apartments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -218,7 +246,7 @@
     <property name="node.js.selected.package.tslint" value="C:\Users\Saif\WebstormProjects\app\webproject\node_modules\tslint" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="SearchEverywhereHistoryKey" value="app.comp&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;add-ap&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;auth&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/guards/auth.guard.ts&#10;add-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;apartment&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;apartment-d&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.ts&#10;add&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;apartments&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.ts&#10;register&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.ts&#10;app.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;app.c&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;app.mod&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;apartmentli&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.ts&#10;login.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;regi&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.ts&#10;add-apa&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;apartmen&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;service&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;envi&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.prod.ts&#10;apar&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;enviro&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.prod.ts&#10;tsconfig&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/tsconfig.app.json&#10;rout&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.routing.ts&#10;login.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.html&#10;login&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;authser&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/shared/auth.service.ts&#10;auth.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/guards/auth.guard.ts&#10;apartment.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;app.modu&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;app.compo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;login.c&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;apartment-de&#9;null&#9;null&#10;login.s&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.service.ts&#10;app.mo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;apartment-list&#9;null&#9;null&#10;login.component&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;login.compo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.spec.ts&#10;angul&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json&#10;index.html&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/index.html&#10;angular&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json&#10;angu&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json&#10;angular-cli&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json" />
+    <property name="SearchEverywhereHistoryKey" value="apartment-list&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;app.componen&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;app.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;apartment&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;auth&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/shared/auth.service.ts&#10;app.comp&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;add-ap&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;add-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;apartment-d&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.ts&#10;add&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;apartments&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.ts&#10;register&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.ts&#10;app.c&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;app.mod&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;apartmentli&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.ts&#10;login.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;regi&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.ts&#10;add-apa&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;apartmen&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;service&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;envi&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.prod.ts&#10;apar&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;enviro&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.prod.ts&#10;tsconfig&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/tsconfig.app.json&#10;rout&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.routing.ts&#10;login.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.html&#10;login&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;authser&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/shared/auth.service.ts&#10;auth.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/guards/auth.guard.ts&#10;apartment.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;app.modu&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;app.compo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;login.c&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;apartment-de&#9;null&#9;null&#10;login.s&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.service.ts&#10;app.mo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;login.component&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.ts&#10;login.compo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.spec.ts&#10;angul&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json&#10;index.html&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/index.html&#10;angular&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json&#10;angu&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json&#10;angular-cli&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/.angular-cli.json" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -261,20 +289,21 @@
       <workItem from="1507716442969" duration="4558000" />
       <workItem from="1507722226961" duration="27320000" />
       <workItem from="1507804714785" duration="6821000" />
-      <workItem from="1507975481932" duration="23033000" />
+      <workItem from="1507975481932" duration="25959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80845000" />
+    <option name="totallyTimeSpent" value="83771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23068433" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23068433" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -307,40 +336,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="105" lean-forward="false" selection-start-line="16" selection-start-column="105" selection-end-line="16" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="n#src#0;n#img#0;n#div#2;n#form#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/shared/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -378,7 +379,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -513,14 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -597,16 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -647,14 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -668,17 +643,6 @@
         <state relative-caret-position="250">
           <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="125" lean-forward="false" selection-start-line="8" selection-start-column="125" selection-end-line="8" selection-end-column="125" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#header#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,24 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/shared/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="91" lean-forward="true" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list-service.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -730,11 +676,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="450">
           <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="111" lean-forward="false" selection-start-line="4" selection-start-column="111" selection-end-line="4" selection-end-column="111" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/shared/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="18" column="88" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/my-apartments/my-apartments.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="58" column="33" lean-forward="true" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>

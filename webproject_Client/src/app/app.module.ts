@@ -18,6 +18,7 @@ import { AddApartmentComponent } from './add-apartment/add-apartment.component';
 import {ApartmentsListService} from "./apartments-list/apartments-list-service.service";
 import { AlertComponent } from './alert/alert.component';
 import {AlertService} from "./alert/alert.service";
+import { MyApartmentsComponent } from './my-apartments/my-apartments.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import {AlertService} from "./alert/alert.service";
     ApartmentDetailsComponent,
     RegisterComponent,
     AddApartmentComponent,
-    AlertComponent
+    AlertComponent,
+    MyApartmentsComponent
   ],
   imports: [
     AlertModule.forRoot(),

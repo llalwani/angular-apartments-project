@@ -86,9 +86,7 @@ namespace ApartmentsCore
                     db.Apartments.Add(apartment);
 
                     //Add apartment to the user
-                 //   db.Users.Attach(user);
                     user.Apartments.Add(apartment);
-                  //  db.Entry(user).Property(x => x.Apartments).IsModified = true;
                 }
                 //TODO: Throw exception
                 db.SaveChanges();
@@ -108,7 +106,23 @@ namespace ApartmentsCore
                 {
                     apartments.Add(apartment);
                 }
+            }
+        }
 
+        public void LoadMyApartments(ICollection<Apartment> apartments, string username)
+        {
+            using (var db = new ApartmentsAppContext())
+            {
+                //IQueryable<Apartment> apartments = from e in db.Apartments select e;
+                // return apartments.ToList();
+                User user = db.Users.Where(myuser => myuser.Username == username).FirstOrDefault();
+                if(user!= null)
+                {
+                    foreach (var apartment in user.Apartments)
+                    {
+                        apartments.Add(apartment);
+                    }
+                }
             }
         }
 

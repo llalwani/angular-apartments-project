@@ -28,8 +28,6 @@ export class AuthService {
   }
 
   register(model: IUser) {
-    let params = new HttpParams();
-    params.set('user', JSON.stringify(model));
     return this._httpClient.post(this.url, model)
     .map((result: Response) => {
       return result;

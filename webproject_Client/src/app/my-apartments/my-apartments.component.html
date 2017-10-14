@@ -1,0 +1,15 @@
+<h1>My Apartments</h1>
+<table class="table products-table">
+  <tr>
+    <th>Address</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th class="delete-column"></th>
+  </tr>
+  <tr *ngFor="let apartment of apartments">
+    <td><a [routerLink]="['edit', apartment.Id]">{{apartment.Address}}</a></td>
+    <td>{{apartment.Description}}</td>
+    <td>{{apartment.Price | currency:'ILS':true:'1.2-2'}}</td>
+    <td><a (click)="deleteApartment(apartment.Id)" class="btn btn-xs btn-danger">Delete</a></td>
+  </tr>
+</table>
