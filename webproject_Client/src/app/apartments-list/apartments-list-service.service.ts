@@ -14,7 +14,9 @@ export class ApartmentsListService {
   constructor(private _httpClient: HttpClient) {
   }
 
-
+  public addApartment(apartment: IApartment) {
+    this.apartments.push(apartment);
+  }
   public getApartments(): Observable<IApartment[]> {
     if (this.apartments && this.apartments.length > 0) {
       return Observable.of(this.apartments);

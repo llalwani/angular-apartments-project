@@ -5,6 +5,9 @@
         <div *ngIf="currentUser">
         <li routerLinkActive="active" role="presentation" style="float:right; line-height: 34px;">Signed in as {{currentUser}} <button (click)="logout()" class="btn btn-default">Log-out</button></li>
         </div>
+        <div *ngIf="!currentUser">
+          <li routerLinkActive="active" role="presentation" style="float:right; line-height: 34px;"><a [routerLink]="['/login']">Log In</a></li>
+        </div>
       </ul>
 </header>
 <br>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {IApartment} from "../shared/apartment";
 import {Router} from "@angular/router";
 import {AddApartmentService} from "./add-apartment.service";
+import {ApartmentsListService} from "../apartments-list/apartments-list-service.service";
 
 @Component({
   selector: 'app-add-apartment',
@@ -18,7 +19,8 @@ export class AddApartmentComponent implements OnInit {
     Price: 0
   };
   constructor(private _router: Router,
-              private _addApartmentService: AddApartmentService) { }
+              private _addApartmentService: AddApartmentService,
+              private _apartmentListService: ApartmentsListService) { }
 
   ngOnInit() {
   }
@@ -28,6 +30,7 @@ export class AddApartmentComponent implements OnInit {
     this._addApartmentService.addApartment(this.model)
       .subscribe((response) => {
         this._router.navigate(['/apartments']);
+        this._apartmentListService.addApartment(this.model);
 
       }, (error) => {
         this.loading = false;
