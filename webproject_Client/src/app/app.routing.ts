@@ -9,10 +9,10 @@ import {AddApartmentComponent} from "./add-apartment/add-apartment.component";
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'apartments', canActivate: [AuthGuard], pathMatch: 'full' },
+  { path: '', redirectTo: 'apartments', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
-  { path: 'add-apartment', component: AddApartmentComponent},
-  { path: 'apartments', canActivate: [AuthGuard], component: ApartmentsListComponent},
+  { path: 'add-apartment', canActivate: [AuthGuard], component: AddApartmentComponent},
+  { path: 'apartments', component: ApartmentsListComponent},
   { path: 'apartments/:id', component: ApartmentDetailsComponent},
   { path: 'register', component: RegisterComponent },
   // otherwise redirect to home
