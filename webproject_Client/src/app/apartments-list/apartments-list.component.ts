@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {ApartmentsListServiceService} from "./apartments-list-service.service";
+import {ApartmentsListService} from "./apartments-list-service.service";
 import { IApartment } from '../shared/apartment';
 
 @Component({
   selector: 'app-apartments-list',
   templateUrl: './apartments-list.component.html',
   styleUrls: ['./apartments-list.component.css'],
-  providers: [ApartmentsListServiceService]
+  providers: []
 
 })
 export class ApartmentsListComponent implements OnInit {
@@ -24,7 +24,7 @@ export class ApartmentsListComponent implements OnInit {
     this.filteredApartments = this.listFilter ? this.performFilter(this.listFilter) : this.apartments;
   }
 
-  constructor(private _apartmentService: ApartmentsListServiceService) {
+  constructor(private _apartmentService: ApartmentsListService) {
     this.sortBy = 'none';
   }
     ngOnInit() {

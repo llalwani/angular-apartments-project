@@ -23,7 +23,7 @@ namespace WebProject.Controllers
 
             if (!s.CheckIfValidLogin(username, password))
             {
-                return NotFound();
+                return BadRequest();
             }
             return Ok(username);
         }

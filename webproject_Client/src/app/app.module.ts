@@ -15,6 +15,9 @@ import {AuthGuard} from "./guards/auth.guard";
 import { RegisterComponent } from './register/register.component';
 import {AuthService} from "./shared/auth.service";
 import { AddApartmentComponent } from './add-apartment/add-apartment.component';
+import {ApartmentsListService} from "./apartments-list/apartments-list-service.service";
+import { AlertComponent } from './alert/alert.component';
+import {AlertService} from "./alert/alert.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { AddApartmentComponent } from './add-apartment/add-apartment.component';
     ApartmentsListComponent,
     ApartmentDetailsComponent,
     RegisterComponent,
-    AddApartmentComponent
+    AddApartmentComponent,
+    AlertComponent
   ],
   imports: [
     AlertModule.forRoot(),
@@ -32,7 +36,9 @@ import { AddApartmentComponent } from './add-apartment/add-apartment.component';
     HttpClientModule
   ],
   providers: [AuthGuard,
-              AuthService],
+              AuthService,
+              ApartmentsListService,
+              AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

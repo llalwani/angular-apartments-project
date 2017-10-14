@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../shared/auth.service";
 import {Router} from "@angular/router";
 import {IUser} from "../shared/user";
+import {HttpErrorResponse} from "@angular/common/http";
+import {AlertService} from "../alert/alert.service";
 
 @Component({
   selector: 'app-register',
@@ -18,7 +20,9 @@ export class RegisterComponent implements OnInit {
   loading = false;
 
   constructor(private _authService: AuthService,
-              private _router: Router) { }
+              private _router: Router,
+              private _alertService: AlertService) {
+  }
 
   ngOnInit() {
   }
@@ -30,7 +34,10 @@ export class RegisterComponent implements OnInit {
       .subscribe((response) => {
         this._router.navigate(['/login']);
 
-      }, (error) => {
+      }, (error: HttpErrorResponse) => {
+        if (error.status === 409) {
+          this._alertService.error('Cant register, there is user with the same username');
+        }
         this.loading = false;
       });
   }

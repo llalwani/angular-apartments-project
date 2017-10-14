@@ -7,18 +7,22 @@ import 'rxjs/add/operator/catch'
 import {environment} from "../../environments/environment";
 
 @Injectable()
-export class ApartmentsListServiceService {
+export class ApartmentsListService {
   public url  = environment.apiUrl + 'apartments';
+  apartments: IApartment[];
+
   constructor(private _httpClient: HttpClient) {
   }
 
 
   public getApartments(): Observable<any> {
-  return this._httpClient.get(this.url, {
-}).map((result: IApartment[]) => {
-    const data = result;
-    return data;
-  }).catch(this.handleError);
+    if (this.apartments && this.apartments.length > 0) {
+      return Observable.of(this.apartments);
+    }
+    return this._httpClient.get(this.url).map((result: IApartment[]) => {
+      this.apartments = result;
+      return result;
+    }).catch(this.handleError);
   }
 
 

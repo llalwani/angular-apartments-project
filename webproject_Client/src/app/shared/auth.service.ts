@@ -58,6 +58,6 @@ export class AuthService {
       errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
     }
     console.error(errorMessage);
-    return Observable.throw(errorMessage);
+    return Observable.throw(err);
   }
 }
