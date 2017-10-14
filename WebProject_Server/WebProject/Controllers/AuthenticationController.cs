@@ -9,8 +9,6 @@ using System.Web.Http.Cors;
 
 namespace WebProject.Controllers
 {
-  //  [EnableCorsAttribute("http://localhost:50743", "*", "*")
-   // [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AuthenticationController : ApiController
     {
         //Register

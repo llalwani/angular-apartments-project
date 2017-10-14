@@ -8,3 +8,5 @@ C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\Apartm
 C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\obj\Debug\ApartmentsCore.csprojResolveAssemblyReference.cache
 C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\obj\Debug\ApartmentsCore.dll
 C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\obj\Debug\ApartmentsCore.pdb
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Debug\Newtonsoft.Json.xml

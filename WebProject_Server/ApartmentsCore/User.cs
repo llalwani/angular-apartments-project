@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace ApartmentsCore
 {
@@ -25,6 +26,7 @@ namespace ApartmentsCore
         [DataMember]
         public string LastName { get; set; }
 
-        public virtual ICollection<Apartment> Apartments { get; set; }
+
+        public virtual List<Apartment> Apartments { get; set; }
     }
 }

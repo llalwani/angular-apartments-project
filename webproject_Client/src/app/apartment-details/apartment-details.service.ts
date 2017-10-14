@@ -2,19 +2,42 @@ import { Injectable } from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {environment} from "../../environments/environment";
+import {ApartmentsListService} from "../apartments-list/apartments-list-service.service";
+import { IApartment } from '../shared/apartment';
+import * as _ from "lodash";
 
 @Injectable()
 export class ApartmentDetailsService {
 
   public url = environment.apiUrl + 'apartments';
 
-  constructor(private _httpClient: HttpClient) { }
+  private dummyApartment: IApartment = {
+    Id: 0,
+    Address: '',
+    Description: '',
+    Price: 0
+  };
+  constructor(private _httpClient: HttpClient,
+              private _aparmentListService: ApartmentsListService) { }
 
-  getApartment(id: number): Observable<any> {
-    return this._httpClient.get(this.url + '?id='+ id, {
-      //  params: params,
-      //   headers: new HttpHeaders().set('Content-Type', 'application/x-whww-form-urlencoded; carset=UTF-8'),
-    }).map((result: Response) => result).catch(this.handleError);
+  getApartment(id: number): Observable<IApartment> {
+  //  if(this._aparmentListService.apartments && this._aparmentListService.apartments.length > 0)
+
+    this._aparmentListService.getApartments().subscribe((apartments: IApartment[]) => {
+        const resultApartment = _.filter(apartments, function(o) {
+          return o.Id === id;
+        });
+        this.dummyApartment.Id = resultApartment[0].Id;
+      this.dummyApartment.Price = resultApartment[0].Price;
+      this.dummyApartment.Description = resultApartment[0].Description;
+      this.dummyApartment.Address = resultApartment[0].Address;
+      return Observable.of(this.dummyApartment);
+    });
+    return Observable.of(this.dummyApartment);
+    // return this._httpClient.get(this.url + '?id='+ id, {
+    //   //  params: params,
+    //   //   headers: new HttpHeaders().set('Content-Type', 'application/x-whww-form-urlencoded; carset=UTF-8'),
+    // }).map((result: Response) => result).catch(this.handleError);
   }
 
   private handleError(err: HttpErrorResponse) {

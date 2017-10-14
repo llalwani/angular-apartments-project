@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using ApartmentsCore;
 using WebProject.Models;
+using System.Web.Http.Cors;
 
 namespace WebProject.Controllers
 {
@@ -15,14 +16,10 @@ namespace WebProject.Controllers
         public IEnumerable<Apartment> Get()
         {
             var s = new ApartmentService();
-            return s.LoadApartments();
-        }
+            var m = new List<Apartment>();
 
-        [HttpGet, Route("api/apartments")]
-        public Apartment Get(int id)
-        {
-            var s = new ApartmentService();
-            return s.LoadApartment(id);
+            s.LoadApartments(m);
+            return m;
         }
 
         [HttpPost, Route("api/apartments")]

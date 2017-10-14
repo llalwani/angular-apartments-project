@@ -15,11 +15,11 @@ export class ApartmentsListService {
   }
 
 
-  public getApartments(): Observable<any> {
+  public getApartments(): Observable<IApartment[]> {
     if (this.apartments && this.apartments.length > 0) {
       return Observable.of(this.apartments);
     }
-    return this._httpClient.get(this.url).map((result: IApartment[]) => {
+    return this._httpClient.get(this.url,{}).map((result: IApartment[]) => {
       this.apartments = result;
       return result;
     }).catch(this.handleError);
@@ -39,6 +39,6 @@ export class ApartmentsListService {
       errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
     }
     console.error(errorMessage);
-    return Observable.throw(errorMessage);
+    return Observable.throw(err);
   }
 }

@@ -43,7 +43,7 @@ export class ApartmentsListComponent implements OnInit {
 
   onLoadApartments(){
     this._apartmentService.getApartments().subscribe(
-      (apartments: any[])=> {
+      (apartments: IApartment[])=> {
           console.log(apartments);
           this.apartments = apartments;
           this.filteredApartments = apartments;

@@ -95,26 +95,23 @@ namespace ApartmentsCore
             }
         }
 
-        public List<Apartment> LoadApartments()
+        public void LoadApartments(ICollection<Apartment> apartments)
         {
             using (var db = new ApartmentsAppContext())
             {
-                IQueryable<Apartment> apartments = from e in db.Apartments select e;
-                return apartments.ToList();
+                //IQueryable<Apartment> apartments = from e in db.Apartments select e;
+                // return apartments.ToList();
+
+                IQueryable<Apartment> query = db.Apartments.Include("User");
+
+                foreach (var apartment in query)
+                {
+                    apartments.Add(apartment);
+                }
 
             }
         }
 
-        public Apartment LoadApartment(int id)
-        {
-            using (var db = new ApartmentsAppContext())
-            {
-                Apartment resultApartment = db.Apartments.Where(apartment => apartment.Id == id).FirstOrDefault();
-
-
-                return resultApartment;
-            }
-        }
         public bool DeleteApartment(Apartment Apartment)
         {
             using (var db = new ApartmentsAppContext())
