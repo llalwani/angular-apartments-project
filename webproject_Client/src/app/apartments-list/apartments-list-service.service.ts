@@ -1,25 +1,20 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams, HttpResponse} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import { IApartment } from './apartment';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch'
+import {environment} from "../../environments/environment";
 
 @Injectable()
 export class ApartmentsListServiceService {
-  public url = 'http://localhost:50743/api/apartments';
+  public url  = environment.apiUrl + 'apartments';
   constructor(private _httpClient: HttpClient) {
   }
 
 
   public getApartments(): Observable<any> {
-
-  //  let httpheaders = new HttpHeaders();
-  //  httpheaders.set('Content-Type', 'application/json');
-  //  httpheaders.set('Accept','*/*');
   return this._httpClient.get(this.url, {
-  //  params: params,
-  //   headers: new HttpHeaders().set('Content-Type', 'application/x-whww-form-urlencoded; carset=UTF-8'),
 }).map((result: IApartment[]) => {
     const data = result;
     return data;

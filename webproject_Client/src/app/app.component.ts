@@ -1,4 +1,4 @@
-import {Component, OnChanges} from '@angular/core';
+import {Component, OnChanges, OnInit} from '@angular/core';
 import {AuthService} from "./shared/auth.service";
 
 @Component({
@@ -12,7 +12,11 @@ export class AppComponent {
   currentUser: string;
   constructor(private _authService: AuthService) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    this._authService.getObservable().subscribe((result:string) => {
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    });
   }
+
   logout() {
     this._authService.logout();
     this.currentUser = undefined;

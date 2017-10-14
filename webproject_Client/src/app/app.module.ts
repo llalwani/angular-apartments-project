@@ -13,6 +13,7 @@ import { ApartmentDetailsComponent } from './apartment-details/apartment-details
 import {routing} from './app.routing'
 import {AuthGuard} from "./guards/auth.guard";
 import { RegisterComponent } from './register/register.component';
+import {AuthService} from "./shared/auth.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,
+              AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

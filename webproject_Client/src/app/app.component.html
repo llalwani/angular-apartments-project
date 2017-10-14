@@ -3,8 +3,8 @@
     <div class='container-fluid'>
       <a class='navbar-brand'>{{title}}</a>
       <ul class='nav navbar-nav'>
-        <li><a [routerLink]="['/welcome']">Home</a></li>
-        <li><a [routerLink]="['/apartments']">Apartments List</a></li>
+        <li><a [routerLink]="['/apartments']">Search Apartments</a></li>
+        <li *ngIf="currentUser"><a [routerLink]="['/add-apartment']">Add Apartments</a></li>
       </ul>
       <div *ngIf="currentUser">
       <p class="navbar-text navbar-right"><button (click)="logout()" class="btn btn-default">Log-out</button></p>
