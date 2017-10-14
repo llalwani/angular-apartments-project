@@ -14,13 +14,15 @@ import {routing} from './app.routing'
 import {AuthGuard} from "./guards/auth.guard";
 import { RegisterComponent } from './register/register.component';
 import {AuthService} from "./shared/auth.service";
+import { AddApartmentComponent } from './add-apartment/add-apartment.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ApartmentsListComponent,
     ApartmentDetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddApartmentComponent
   ],
   imports: [
     AlertModule.forRoot(),

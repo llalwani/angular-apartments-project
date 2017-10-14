@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IApartment } from '../apartments-list/apartment';
+import { IApartment } from '../shared/apartment';
 import {ApartmentDetailsService} from "./apartment-details.service";
 import {ActivatedRoute, Router} from "@angular/router";
 

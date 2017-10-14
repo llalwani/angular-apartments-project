@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
-import { IApartment } from './apartment';
+import { IApartment } from '../shared/apartment';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch'
 import {environment} from "../../environments/environment";

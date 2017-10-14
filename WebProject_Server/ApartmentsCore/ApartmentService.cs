@@ -74,12 +74,23 @@ namespace ApartmentsCore
         #endregion
 
         #region Apartment_Functions
-        public void AddApartment(Apartment apartment)
+        public void AddApartment(Apartment apartment, string username)
         {
             using (var db = new ApartmentsAppContext())
             {
+                User user = db.Users.Where(myuser => myuser.Username == username).FirstOrDefault();
+                if (user != null)
+                {
+                    // Add user to the relvant apartment
+                    apartment.User = user;
+                    db.Apartments.Add(apartment);
 
-                db.Apartments.Add(apartment);
+                    //Add apartment to the user
+                 //   db.Users.Attach(user);
+                    user.Apartments.Add(apartment);
+                  //  db.Entry(user).Property(x => x.Apartments).IsModified = true;
+                }
+                //TODO: Throw exception
                 db.SaveChanges();
             }
         }

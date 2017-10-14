@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ApartmentsCore;
+using WebProject.Models;
 
 namespace WebProject.Controllers
 {
@@ -25,14 +26,18 @@ namespace WebProject.Controllers
         }
 
         [HttpPost, Route("api/apartments")]
-        public IHttpActionResult Post(Apartment apartment)
+        public IHttpActionResult Post(ApartmentWithUserModel apartment)
         {
-            if(apartment==null)
+            if(apartment==null || apartment.apartment == null || String.IsNullOrEmpty(apartment.username))
             {
                 return BadRequest("apartment can't be Null");
             }
+            Apartment returnedApartment = new Apartment();
+            returnedApartment.Address = apartment.apartment.Address;
+            returnedApartment.Description = apartment.apartment.Description;
+            returnedApartment.Price = apartment.apartment.Price;
             var s = new ApartmentService();
-            s.AddApartment(apartment);
+            s.AddApartment(returnedApartment, apartment.username);
             return Ok(apartment);
         }
 

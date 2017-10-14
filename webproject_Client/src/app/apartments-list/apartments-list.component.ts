@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApartmentsListServiceService} from "./apartments-list-service.service";
-import { IApartment } from './apartment';
+import { IApartment } from '../shared/apartment';
 
 @Component({
   selector: 'app-apartments-list',
@@ -43,7 +43,7 @@ export class ApartmentsListComponent implements OnInit {
 
   onLoadApartments(){
     this._apartmentService.getApartments().subscribe(
-      (apartments: IApartment[])=> {
+      (apartments: any[])=> {
           console.log(apartments);
           this.apartments = apartments;
           this.filteredApartments = apartments;

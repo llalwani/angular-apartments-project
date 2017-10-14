@@ -1,16 +1,14 @@
-<div>
-  <nav class='navbar navbar-default'>
-    <div class='container-fluid'>
-      <a class='navbar-brand'>{{title}}</a>
-      <ul class='nav navbar-nav'>
-        <li><a [routerLink]="['/apartments']">Search Apartments</a></li>
-        <li *ngIf="currentUser"><a [routerLink]="['/add-apartment']">Add Apartments</a></li>
+<header>
+      <ul class="nav nav-tabs" role="tablist">
+        <li routerLinkActive="active"role="presentation"><a [routerLink]="['/apartments']">Search Apartments</a></li>
+        <li routerLinkActive="active" role="presentation" *ngIf="currentUser"><a [routerLink]="['/add-apartment']">Add Apartments</a></li>
+        <div *ngIf="currentUser">
+        <li routerLinkActive="active" role="presentation" style="float:right; line-height: 34px;">Signed in as {{currentUser}} <button (click)="logout()" class="btn btn-default">Log-out</button></li>
+        </div>
       </ul>
-      <div *ngIf="currentUser">
-      <p class="navbar-text navbar-right"><button (click)="logout()" class="btn btn-default">Log-out</button></p>
-      <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">{{currentUser}}</a></p>
-    </div>
-    </div>
-  </nav>
-</div>
-<router-outlet></router-outlet>
+</header>
+<br>
+<br>
+<main>
+  <router-outlet></router-outlet>
+</main>

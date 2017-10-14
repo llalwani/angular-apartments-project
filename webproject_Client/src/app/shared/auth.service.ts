@@ -3,7 +3,7 @@ import { Observable } from "rxjs/Rx";
 import { Response } from '@angular/http';
   import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {IUser} from "../register/user";
+import {IUser} from "./user";
 import {Subject} from "rxjs/Subject";
 import {environment} from "../../environments/environment";
 @Injectable()
