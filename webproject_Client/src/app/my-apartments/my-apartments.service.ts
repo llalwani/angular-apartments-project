@@ -9,14 +9,19 @@ export class MyApartmentsService {
 
   private myApartmentsUrl = environment.apiUrl + 'myapartments';
   private apartmentsUrl = environment.apiUrl + 'apartments';
+  apartments: IApartment[];
 
   constructor(private _httpClient: HttpClient) {
   }
 
 
   getMyApartments(username: string) {
+    if (this.apartments && this.apartments.length > 0) {
+      return Observable.of(this.apartments);
+    }
     return this._httpClient.get(this.myApartmentsUrl + '?username=' + username)
       .map((result: IApartment[]) => {
+      this.apartments = result;
         return result;
       }).catch(this.handleError);
   }

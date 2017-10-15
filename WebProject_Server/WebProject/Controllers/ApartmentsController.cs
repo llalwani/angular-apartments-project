@@ -44,7 +44,7 @@ namespace WebProject.Controllers
             var s = new ApartmentService();
             if(s.DeleteApartment(id))
             {
-                return Ok();
+                return Ok("success");
             }
             return NotFound();
         }

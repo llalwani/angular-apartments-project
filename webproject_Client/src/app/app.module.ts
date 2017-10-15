@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {RouterModule, Routes} from "@angular/router";
 import { AlertModule } from 'ngx-bootstrap';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
@@ -19,6 +18,10 @@ import {ApartmentsListService} from "./apartments-list/apartments-list-service.s
 import { AlertComponent } from './alert/alert.component';
 import {AlertService} from "./alert/alert.service";
 import { MyApartmentsComponent } from './my-apartments/my-apartments.component';
+import {MatProgressBarModule} from '@angular/material';
+import {MyApartmentsService} from "./my-apartments/my-apartments.service";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,10 +38,12 @@ import { MyApartmentsComponent } from './my-apartments/my-apartments.component';
     BrowserModule,
     routing,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressBarModule
   ],
   providers: [AuthGuard,
               AuthService,
+              MyApartmentsService,
               ApartmentsListService,
               AlertService],
   bootstrap: [AppComponent]

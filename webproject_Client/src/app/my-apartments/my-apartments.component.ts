@@ -9,7 +9,7 @@ import {AlertService} from "../alert/alert.service";
   selector: 'app-my-apartments',
   templateUrl: './my-apartments.component.html',
   styleUrls: ['./my-apartments.component.css'],
-  providers: [MyApartmentsService]
+  providers: []
 })
 export class MyApartmentsComponent implements OnInit {
 
@@ -22,9 +22,9 @@ export class MyApartmentsComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
     this._apartmentService.getMyApartments(this.currentUser).subscribe((apartments: IApartment[]) => {
       this.apartments = apartments;
+
     });
   }
 
@@ -36,6 +36,9 @@ export class MyApartmentsComponent implements OnInit {
     if (apartmentResult) {
       this._apartmentService.deleteApartment(apartmentResult.Id).subscribe((result) => {
         console.log(result);
+        const deleted: any = _.remove(this.apartments, function (o) {
+          return o.Id === apartmentResult.Id;
+        })
       }, (error: HttpErrorResponse) => {
         if (error.status === 400) {
           this._alertService.error('Bad Request!');
