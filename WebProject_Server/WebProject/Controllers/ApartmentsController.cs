@@ -39,15 +39,14 @@ namespace WebProject.Controllers
         }
 
         [HttpDelete, Route("api/apartments")]
-        public IHttpActionResult Delete(Apartment apartment)
+        public IHttpActionResult Delete(int id)
         {
-            if (apartment == null)
-            {
-                return BadRequest("apartment can't be Null");
-            }
             var s = new ApartmentService();
-            s.DeleteApartment(apartment);
-            return Ok(apartment);
+            if(s.DeleteApartment(id))
+            {
+                return Ok();
+            }
+            return NotFound();
         }
     }
 }

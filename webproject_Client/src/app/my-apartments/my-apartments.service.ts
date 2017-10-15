@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import {environment} from "../../environments/environment";
 import {IApartment} from "../shared/apartment";
@@ -7,15 +7,23 @@ import {IApartment} from "../shared/apartment";
 @Injectable()
 export class MyApartmentsService {
 
-  private url = environment.apiUrl + 'myapartments';
+  private myApartmentsUrl = environment.apiUrl + 'myapartments';
+  private apartmentsUrl = environment.apiUrl + 'apartments';
 
   constructor(private _httpClient: HttpClient) {
   }
 
 
   getMyApartments(username: string) {
-    return this._httpClient.get(this.url + '?username=' + username)
+    return this._httpClient.get(this.myApartmentsUrl + '?username=' + username)
       .map((result: IApartment[]) => {
+        return result;
+      }).catch(this.handleError);
+  }
+
+  deleteApartment(id: number) {
+    return this._httpClient.delete(this.apartmentsUrl + '?id='+ id)
+      .map((result: Response) => {
         return result;
       }).catch(this.handleError);
   }

@@ -126,11 +126,17 @@ namespace ApartmentsCore
             }
         }
 
-        public bool DeleteApartment(Apartment Apartment)
+        public bool DeleteApartment(int id)
         {
             using (var db = new ApartmentsAppContext())
             {
-                Apartment DeletedApartment = db.Apartments.Remove(Apartment);
+                Apartment apartment = db.Apartments.Find(id);
+                if(apartment == null)
+                {
+                    return false;
+                }
+                Apartment DeletedApartment = db.Apartments.Remove(apartment);
+                db.SaveChanges();
                 return DeletedApartment != null;
             }
         }
