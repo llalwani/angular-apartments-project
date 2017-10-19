@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs/Observable";
@@ -22,8 +22,6 @@ export class AddApartmentService {
       username: this.currentUser,
       apartment: _.cloneDeep(model)
     };
-    // newModel.username = this.currentUser;
-    // newModel.apartment = _.cloneDeep(model);
     return this._httpClient.post(this.url, newModel)
       .map((result: IApartment) => {
         return result;

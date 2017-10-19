@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from "./shared/auth.service";
 import {ApartmentsListService} from "./apartments-list/apartments-list-service.service";
 
@@ -9,7 +9,6 @@ import {ApartmentsListService} from "./apartments-list/apartments-list-service.s
   providers:[AuthService]
 })
 export class AppComponent {
-  title = 'Product List App';
   currentUser: string;
   constructor(private _authService: AuthService,
               private _apartmentListService: ApartmentsListService) {

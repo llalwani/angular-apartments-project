@@ -33,16 +33,6 @@ export class ApartmentsListComponent implements OnInit {
     this.onLoadApartments();
   }
 
-  // set sortBy(value: string) {
-  //   if(value !== this._sortBy) {
-  //     this._sortBy = value;
-  //     if(this.sortBy === 'price') {
-  //       this.filteredApartments.sort(this.sortByPriceAsc);
-  //     }
-  //   }
-  // }
-
-
   onLoadApartments() {
     this._apartmentService.getApartments().subscribe(
       (apartments: IApartment[]) => {

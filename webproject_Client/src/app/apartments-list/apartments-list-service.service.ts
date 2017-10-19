@@ -32,15 +32,18 @@ export class ApartmentsListService {
 
   public deleteApartmentFromLocalArray(apartment: IApartment) {
     if(!apartment) {
-      console.log('cannot find apartment');
+      return;
     }
 
     const isDeletedFromApartmentsList = _.remove(this.apartments, function (o) {
       return o.Id === apartment.Id;
     });
-    if(isDeletedFromApartmentsList) {
-      this._alertService.success('apartment deleted successfully');
+    if(!isDeletedFromApartmentsList) {
+      this._alertService.error('apartment cannot be found in order to be deleted');
+      return;
     }
+    this._alertService.success('apartment deleted sucessfully');
+
   }
 
   private handleError(err: HttpErrorResponse) {

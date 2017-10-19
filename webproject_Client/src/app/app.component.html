@@ -4,8 +4,8 @@
         <li routerLinkActive="active" role="presentation" *ngIf="currentUser"><a [routerLink]="['/add-apartment']">Add Apartments</a></li>
         <li routerLinkActive="active" role="presentation" *ngIf="currentUser"><a [routerLink]="['/my-apartments']">My Apartments</a></li>
 
-        <div *ngIf="currentUser">
-        <li routerLinkActive="active" role="presentation" style="float:right; line-height: 34px;">Signed in as {{currentUser}} <button (click)="logout()" class="btn btn-default">Log-out</button></li>
+        <div style="margin-right: 20px" *ngIf="currentUser">
+        <li routerLinkActive="active" role="presentation" style="float:right; line-height: 34px;">Signed in as {{currentUser}} &nbsp; &nbsp; &nbsp;<button (click)="logout()" class="btn btn-default">Log-out</button></li>
         </div>
         <div  style="margin-right: 20px" *ngIf="!currentUser">
           <li routerLinkActive="active" role="presentation" style="float:right; line-height: 34px;"><a [routerLink]="['/login']">Log In</a></li>

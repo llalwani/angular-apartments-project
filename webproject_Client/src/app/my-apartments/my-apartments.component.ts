@@ -42,10 +42,11 @@ export class MyApartmentsComponent implements OnInit {
           return o.Id === apartmentResult.Id;
         });
 
-        if(isDeletedFromMyApartments) {
-          this._apartmentListService.deleteApartmentFromLocalArray(apartmentResult);
-
+        if(!isDeletedFromMyApartments) {
+          this._alertService.error('apartment cannot be found in order to be deleted');
         }
+        this._apartmentListService.deleteApartmentFromLocalArray(apartmentResult);
+
       }, (error: HttpErrorResponse) => {
         if (error.status === 400) {
           this._alertService.error('Bad Request!');
