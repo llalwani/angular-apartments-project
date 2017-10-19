@@ -38,6 +38,10 @@ export class RegisterComponent implements OnInit {
         if (error.status === 409) {
           this._alertService.error('Cant register, there is user with the same username');
         }
+        if(error.status === 0) {
+          this._alertService.error('Failed to connect to server!');
+
+        }
         this.loading = false;
       });
   }

@@ -5,13 +5,16 @@ import { IApartment } from '../shared/apartment';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch'
 import {environment} from "../../environments/environment";
+import * as _ from 'lodash'
+import {AlertService} from "../alert/alert.service";
 
 @Injectable()
 export class ApartmentsListService {
   public url  = environment.apiUrl + 'apartments';
-  apartments: IApartment[];
+  public apartments: IApartment[];
 
-  constructor(private _httpClient: HttpClient) {
+  constructor(private _httpClient: HttpClient,
+              private _alertService: AlertService) {
   }
 
   public addApartment(apartment: IApartment) {
@@ -27,6 +30,18 @@ export class ApartmentsListService {
     }).catch(this.handleError);
   }
 
+  public deleteApartmentFromLocalArray(apartment: IApartment) {
+    if(!apartment) {
+      console.log('cannot find apartment');
+    }
+
+    const isDeletedFromApartmentsList = _.remove(this.apartments, function (o) {
+      return o.Id === apartment.Id;
+    });
+    if(isDeletedFromApartmentsList) {
+      this._alertService.success('apartment deleted successfully');
+    }
+  }
 
   private handleError(err: HttpErrorResponse) {
     // in a real world app, we may send the server to some remote logging infrastructure

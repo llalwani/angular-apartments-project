@@ -4,6 +4,7 @@ import {IApartment} from "../shared/apartment";
 import * as _ from 'lodash'
 import {HttpErrorResponse} from "@angular/common/http";
 import {AlertService} from "../alert/alert.service";
+import {ApartmentsListService} from "../apartments-list/apartments-list-service.service";
 
 @Component({
   selector: 'app-my-apartments',
@@ -17,7 +18,8 @@ export class MyApartmentsComponent implements OnInit {
   currentUser: string;
 
   constructor(private _apartmentService: MyApartmentsService,
-              private _alertService: AlertService) {
+              private _alertService: AlertService,
+              private _apartmentListService: ApartmentsListService) {
   }
 
   ngOnInit() {
@@ -36,9 +38,14 @@ export class MyApartmentsComponent implements OnInit {
     if (apartmentResult) {
       this._apartmentService.deleteApartment(apartmentResult.Id).subscribe((result) => {
         console.log(result);
-        const deleted: any = _.remove(this.apartments, function (o) {
+        const isDeletedFromMyApartments: any = _.remove(this.apartments, function (o) {
           return o.Id === apartmentResult.Id;
-        })
+        });
+
+        if(isDeletedFromMyApartments) {
+          this._apartmentListService.deleteApartmentFromLocalArray(apartmentResult);
+
+        }
       }, (error: HttpErrorResponse) => {
         if (error.status === 400) {
           this._alertService.error('Bad Request!');

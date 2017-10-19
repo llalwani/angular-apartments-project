@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApartmentsListService} from "./apartments-list-service.service";
 import { IApartment } from '../shared/apartment';
+import {AlertService} from "../alert/alert.service";
 
 @Component({
   selector: 'app-apartments-list',
@@ -24,7 +25,8 @@ export class ApartmentsListComponent implements OnInit {
     this.filteredApartments = this.listFilter ? this.performFilter(this.listFilter) : this.apartments;
   }
 
-  constructor(private _apartmentService: ApartmentsListService) {
+  constructor(private _apartmentService: ApartmentsListService,
+              private _alertService: AlertService) {
     this.sortBy = 'none';
   }
     ngOnInit() {
@@ -41,14 +43,17 @@ export class ApartmentsListComponent implements OnInit {
   // }
 
 
-  onLoadApartments(){
+  onLoadApartments() {
     this._apartmentService.getApartments().subscribe(
-      (apartments: IApartment[])=> {
-          console.log(apartments);
-          this.apartments = apartments;
-          this.filteredApartments = apartments;
-      }, (error)=> {
-        console.log(error);
+      (apartments: IApartment[]) => {
+        console.log(apartments);
+        this.apartments = apartments;
+        this.filteredApartments = apartments;
+      }, (error) => {
+        if (error.status === 0) {
+          this._alertService.error('Failed to connect to server!');
+
+        }
       });
   }
 

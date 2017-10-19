@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import {environment} from "../../environments/environment";
 import {IApartment} from "../shared/apartment";
@@ -48,4 +48,6 @@ export class MyApartmentsService {
     console.error(errorMessage);
     return Observable.throw(err);
   }
+
+
 }

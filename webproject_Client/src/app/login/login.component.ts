@@ -25,6 +25,10 @@ export class LoginComponent implements OnInit {
          this.router.navigate(['/apartments']);
        },
        (error: HttpErrorResponse) => {
+         if(error.status === 0) {
+           this._alertService.error('Failed to connect to server!');
+
+         }
          if (error.status === 400) {
            this._alertService.error('Wrong username or password!');
 

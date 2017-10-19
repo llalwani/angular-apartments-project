@@ -25,7 +25,7 @@ export class AddApartmentService {
     // newModel.username = this.currentUser;
     // newModel.apartment = _.cloneDeep(model);
     return this._httpClient.post(this.url, newModel)
-      .map((result: Response) => {
+      .map((result: IApartment) => {
         return result;
       }).catch(this.handleError);
   }

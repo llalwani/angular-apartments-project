@@ -74,7 +74,7 @@ namespace ApartmentsCore
         #endregion
 
         #region Apartment_Functions
-        public void AddApartment(Apartment apartment, string username)
+        public Apartment AddApartment(Apartment apartment, string username)
         {
             using (var db = new ApartmentsAppContext())
             {
@@ -90,6 +90,7 @@ namespace ApartmentsCore
                 }
                 //TODO: Throw exception
                 db.SaveChanges();
+                return db.Apartments.Find(apartment.Id);
             }
         }
 

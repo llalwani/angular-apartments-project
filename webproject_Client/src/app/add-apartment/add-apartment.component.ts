@@ -28,9 +28,10 @@ export class AddApartmentComponent implements OnInit {
   addApartment() {
     this.loading = true;
     this._addApartmentService.addApartment(this.model)
-      .subscribe((response) => {
+      .subscribe((addedApartment: IApartment) => {
+        console.log(addedApartment);
+        this._apartmentListService.addApartment(addedApartment);
         this._router.navigate(['/apartments']);
-        this._apartmentListService.addApartment(this.model);
 
       }, (error) => {
         this.loading = false;

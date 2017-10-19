@@ -29,13 +29,12 @@ namespace WebProject.Controllers
             {
                 return BadRequest("apartment can't be Null");
             }
-            Apartment returnedApartment = new Apartment();
-            returnedApartment.Address = apartment.apartment.Address;
-            returnedApartment.Description = apartment.apartment.Description;
-            returnedApartment.Price = apartment.apartment.Price;
+            Apartment apartmentToSend = new Apartment();
+            apartmentToSend.Address = apartment.apartment.Address;
+            apartmentToSend.Description = apartment.apartment.Description;
+            apartmentToSend.Price = apartment.apartment.Price;
             var s = new ApartmentService();
-            s.AddApartment(returnedApartment, apartment.username);
-            return Ok(apartment);
+            return Ok(s.AddApartment(apartmentToSend, apartment.username));
         }
 
         [HttpDelete, Route("api/apartments")]
