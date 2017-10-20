@@ -19,17 +19,12 @@ export class AddApartmentComponent implements OnInit {
     lat: 32,
     lng: 34.9
   };
-  model: IApartment = {
-    Id: 0,
-    Address: '',
-    Description: '',
-    Price: 0,
-    Lat: this.marker.lat,
-    Lng: this.marker.lng
-  };
+  model: IApartment = this.getEmptyModel();
+
   constructor(private _router: Router,
               private _addApartmentService: AddApartmentService,
-              private _apartmentListService: ApartmentsListService) { }
+              private _apartmentListService: ApartmentsListService) {
+  }
 
   ngOnInit() {
   }
@@ -51,10 +46,25 @@ export class AddApartmentComponent implements OnInit {
   }
 
   mapClicked($event: any) {
-    this.marker.lat =$event.coords.lat;
+    this.marker.lat = $event.coords.lat;
     this.marker.lng = $event.coords.lng;
     this.model.Lat = $event.coords.lat;
     this.model.Lng = $event.coords.lng;
   }
 
+  getEmptyModel(): IApartment {
+    return {
+      Id: 0,
+      Address: '',
+      Description: '',
+      Price: 0,
+      Lat: this.marker.lat,
+      Lng: this.marker.lng,
+      RoomsNumber: 0,
+      apartmentSize: 0,
+      hasParking: false,
+      hasAirConditining: false,
+      hasFurniture: false
+    };
+  }
 }

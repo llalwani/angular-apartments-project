@@ -1,3 +1,10 @@
 agm-map {
   height: 150px;
 }
+
+.example-section {
+  display: inline;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}

@@ -5,4 +5,9 @@ export interface IApartment {
     Description: string;
     Lat: number;
     Lng: number;
+    RoomsNumber: number;
+    apartmentSize: number;
+    hasParking: boolean;
+    hasAirConditining: boolean;
+    hasFurniture: boolean;
 }

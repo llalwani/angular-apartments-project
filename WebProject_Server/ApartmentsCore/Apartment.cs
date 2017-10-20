@@ -24,11 +24,29 @@ namespace ApartmentsCore
         [DataMember]
         public double Price { get; set; }
 
+        //--Google maps location
         [DataMember]
         public double Lat { get; set; }
 
         [DataMember]
         public double Lng { get; set; }
+
+        //Google maps location--
+
+        [DataMember]
+        public int RoomsNumber { get; set; }
+
+        [DataMember]
+        public double ApartmentSize { get; set; }
+
+        [DataMember]
+        public bool hasParking { get; set; }
+
+        [DataMember]
+        public bool hasAirConditining { get; set; }
+
+        [DataMember]
+        public bool hasFurniture { get; set; }
 
         public virtual User User { get; set; }
 

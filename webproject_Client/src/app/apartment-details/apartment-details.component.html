@@ -24,15 +24,25 @@
         </div>
 
         <div class='row'>
+          <div class='col-md-3'>Rooms Number:</div>
+          <div class='col-md-6'>{{apartment.RoomsNumber}}</div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Apartment Size:</div>
+          <div class='col-md-6'>{{apartment.apartmentSize}}</div>
+        </div>
+
+        <div class='row'>
           <div class='col-md-3'>Map:</div>
           <agm-map [latitude]="lat" [longitude]="lng">
             <agm-marker
               [latitude]="apartment.Lat"
               [longitude]="apartment.Lng">
 
-              <agm-info-window>
-                <strong>InfoWindow content</strong>
-              </agm-info-window>
+              <!--<agm-info-window>-->
+                <!--<strong>InfoWindow content</strong>-->
+              <!--</agm-info-window>-->
 
             </agm-marker>
           </agm-map>

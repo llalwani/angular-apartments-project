@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
-import {environment} from "../../environments/environment";
+import { HttpErrorResponse} from "@angular/common/http";
 import {ApartmentsListService} from "../apartments-list/apartments-list-service.service";
 import { IApartment } from '../shared/apartment';
 import * as _ from "lodash";
@@ -9,40 +8,31 @@ import * as _ from "lodash";
 @Injectable()
 export class ApartmentDetailsService {
 
-  public url = environment.apiUrl + 'apartments';
-
-  private dummyApartment: IApartment = {
-    Id: 0,
-    Address: '',
-    Description: '',
-    Price: 0,
-    Lat: 0,
-    Lng: 0
-  };
-  constructor(private _httpClient: HttpClient,
-              private _aparmentListService: ApartmentsListService) { }
+  private dummyApartment: IApartment = this.getEmptyModel();
+  constructor(private _aparmentListService: ApartmentsListService) { }
 
   getApartment(id: number): Observable<IApartment> {
-  //  if(this._aparmentListService.apartments && this._aparmentListService.apartments.length > 0)
-
     this._aparmentListService.getApartments().subscribe((apartments: IApartment[]) => {
         const resultApartment = _.filter(apartments, function(o) {
           return o.Id === id;
         });
+
+      //  _.cloneDeep(this.dummyApartment,resultApartment[0]);
         this.dummyApartment.Id = resultApartment[0].Id;
       this.dummyApartment.Price = resultApartment[0].Price;
       this.dummyApartment.Description = resultApartment[0].Description;
       this.dummyApartment.Address = resultApartment[0].Address;
       this.dummyApartment.Lat = resultApartment[0].Lat;
       this.dummyApartment.Lng = resultApartment[0].Lng;
+      this.dummyApartment.RoomsNumber = resultApartment[0].RoomsNumber;
+      this.dummyApartment.apartmentSize = resultApartment[0].apartmentSize;
+      this.dummyApartment.hasAirConditining = resultApartment[0].hasAirConditining;
+      this.dummyApartment.hasFurniture = resultApartment[0].hasFurniture;
+      this.dummyApartment.hasParking = resultApartment[0].hasParking;
 
       return Observable.of(this.dummyApartment);
     });
     return Observable.of(this.dummyApartment);
-    // return this._httpClient.get(this.url + '?id='+ id, {
-    //   //  params: params,
-    //   //   headers: new HttpHeaders().set('Content-Type', 'application/x-whww-form-urlencoded; carset=UTF-8'),
-    // }).map((result: Response) => result).catch(this.handleError);
   }
 
   private handleError(err: HttpErrorResponse) {
@@ -59,5 +49,21 @@ export class ApartmentDetailsService {
     }
     console.error(errorMessage);
     return Observable.throw(errorMessage);
+  }
+
+  private getEmptyModel(): IApartment {
+    return {
+      Id: 0,
+      Address: '',
+      Description: '',
+      Price: 0,
+      Lat: 0,
+      Lng: 0,
+      RoomsNumber: 0,
+      apartmentSize: 0,
+      hasParking: false,
+      hasAirConditining: false,
+      hasFurniture: false
+    };
   }
 }

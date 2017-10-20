@@ -18,7 +18,7 @@ import {ApartmentsListService} from "./apartments-list/apartments-list-service.s
 import { AlertComponent } from './alert/alert.component';
 import {AlertService} from "./alert/alert.service";
 import { MyApartmentsComponent } from './my-apartments/my-apartments.component';
-import {MatButtonModule, MatExpansionModule, MatProgressBarModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatExpansionModule, MatProgressBarModule} from '@angular/material';
 import {MyApartmentsService} from "./my-apartments/my-apartments.service";
 import { AgmCoreModule } from '@agm/core';
 
@@ -46,6 +46,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatButtonModule,
     MatExpansionModule,
+    MatCheckboxModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB781ud16z5awfrXshMx_VW6FElATz8uxU'
     })

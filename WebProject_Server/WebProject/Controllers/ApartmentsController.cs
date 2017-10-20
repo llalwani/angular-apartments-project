@@ -30,11 +30,12 @@ namespace WebProject.Controllers
                 return BadRequest("apartment can't be Null");
             }
             Apartment apartmentToSend = new Apartment();
-            apartmentToSend.Address = apartment.apartment.Address;
-            apartmentToSend.Description = apartment.apartment.Description;
-            apartmentToSend.Price = apartment.apartment.Price;
-            apartmentToSend.Lat = apartment.apartment.Lat;
-            apartmentToSend.Lng = apartment.apartment.Lng;
+            //apartmentToSend.Address = apartment.apartment.Address;
+            //apartmentToSend.Description = apartment.apartment.Description;
+            //apartmentToSend.Price = apartment.apartment.Price;
+            //apartmentToSend.Lat = apartment.apartment.Lat;
+            //apartmentToSend.Lng = apartment.apartment.Lng;
+            apartmentToSend = apartment.apartment;
             var s = new ApartmentService();
             return Ok(s.AddApartment(apartmentToSend, apartment.username));
         }
