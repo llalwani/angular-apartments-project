@@ -15,7 +15,9 @@ export class ApartmentDetailsService {
     Id: 0,
     Address: '',
     Description: '',
-    Price: 0
+    Price: 0,
+    Lat: 0,
+    Lng: 0
   };
   constructor(private _httpClient: HttpClient,
               private _aparmentListService: ApartmentsListService) { }
@@ -31,6 +33,9 @@ export class ApartmentDetailsService {
       this.dummyApartment.Price = resultApartment[0].Price;
       this.dummyApartment.Description = resultApartment[0].Description;
       this.dummyApartment.Address = resultApartment[0].Address;
+      this.dummyApartment.Lat = resultApartment[0].Lat;
+      this.dummyApartment.Lng = resultApartment[0].Lng;
+
       return Observable.of(this.dummyApartment);
     });
     return Observable.of(this.dummyApartment);

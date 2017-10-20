@@ -24,6 +24,12 @@ namespace ApartmentsCore
         [DataMember]
         public double Price { get; set; }
 
+        [DataMember]
+        public double Lat { get; set; }
+
+        [DataMember]
+        public double Lng { get; set; }
+
         public virtual User User { get; set; }
 
     }

@@ -22,6 +22,21 @@
           <div class='col-md-3'>Price:</div>
           <div class='col-md-6'>{{apartment.Price|currency:'USD':true}}</div>
         </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Map:</div>
+          <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker
+              [latitude]="apartment.Lat"
+              [longitude]="apartment.Lng">
+
+              <agm-info-window>
+                <strong>InfoWindow content</strong>
+              </agm-info-window>
+
+            </agm-marker>
+          </agm-map>
+        </div>
         <!--<div class='row'>-->
           <!--<div class='col-md-3'>5 Star Rating:</div>-->
           <!--<div class='col-md-6'>-->

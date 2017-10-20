@@ -12,6 +12,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class ApartmentDetailsComponent implements OnInit {
 
   apartment: IApartment;
+  lat: number = 32;
+  lng: number = 34.9;
   constructor(private _apartmentDetailsService: ApartmentDetailsService,
               private _route: ActivatedRoute,
               private _router: Router) { }

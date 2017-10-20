@@ -33,6 +33,8 @@ namespace WebProject.Controllers
             apartmentToSend.Address = apartment.apartment.Address;
             apartmentToSend.Description = apartment.apartment.Description;
             apartmentToSend.Price = apartment.apartment.Price;
+            apartmentToSend.Lat = apartment.apartment.Lat;
+            apartmentToSend.Lng = apartment.apartment.Lng;
             var s = new ApartmentService();
             return Ok(s.AddApartment(apartmentToSend, apartment.username));
         }
