@@ -16,13 +16,18 @@ export class AddApartmentService {
 
 
 
-  addApartment(model: IApartment) {
+  addApartment(model: IApartment, image: File) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    let newModel: IApartmentWithUser = {
+    let imageForm = new FormData();
+    imageForm.append('image', image);
+    imageForm.append('username', this.currentUser);
+    imageForm.append('apartment', JSON.stringify(_.cloneDeep(model)));
+    let newModel: any = {
       username: this.currentUser,
-      apartment: _.cloneDeep(model)
+      apartment: _.cloneDeep(model),
+      image: image
     };
-    return this._httpClient.post(this.url, newModel)
+    return this._httpClient.post(this.url, imageForm)
       .map((result: IApartment) => {
         return result;
       }).catch(this.handleError);

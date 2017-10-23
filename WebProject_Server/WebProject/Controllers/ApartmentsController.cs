@@ -7,6 +7,9 @@ using System.Web.Http;
 using ApartmentsCore;
 using WebProject.Models;
 using System.Web.Http.Cors;
+using System.Web;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace WebProject.Controllers
 {
@@ -22,33 +25,71 @@ namespace WebProject.Controllers
             return m;
         }
 
+        //[HttpPost, Route("api/apartments")]
+        //public IHttpActionResult Post(ApartmentWithUserModel apartment)
+        //{
+        //    if (apartment == null || apartment.apartment == null || String.IsNullOrEmpty(apartment.username))
+        //    {
+        //        return BadRequest("apartment can't be Null");
+        //    }
+        //    Apartment apartmentToSend = new Apartment();
+
+        //    HttpResponseMessage response = new HttpResponseMessage();
+        //    var httpRequest = HttpContext.Current.Request;
+        //    if (httpRequest.Files.Count > 0)
+        //    {
+        //    }
+        //    apartmentToSend = apartment.apartment;
+        //    var s = new ApartmentService();
+        //    return Ok(s.AddApartment(apartmentToSend, apartment.username));
+        //}
+
+
         [HttpPost, Route("api/apartments")]
-        public IHttpActionResult Post(ApartmentWithUserModel apartment)
+        public IHttpActionResult Post()
         {
-            if(apartment==null || apartment.apartment == null || String.IsNullOrEmpty(apartment.username))
+            HttpResponseMessage response = new HttpResponseMessage();
+            var httpRequest = HttpContext.Current.Request;
+            string username = HttpContext.Current.Request.Params["username"];
+            string apartment = HttpContext.Current.Request.Params["apartment"];
+            Apartment apartmentToSend = JsonConvert.DeserializeObject<Apartment>(apartment);
+            if (httpRequest.Files.Count > 0)
             {
-                return BadRequest("apartment can't be Null");
+                apartmentToSend.Images = new List<Image>();
+                foreach (string file in httpRequest.Files)
+                {
+                    var postedFile = httpRequest.Files[file];
+                    byte[] imageData = convertFileToByteArray(postedFile);
+                    Image image = new Image();
+                    image.ImageDataBase64 = System.Convert.ToBase64String(imageData);
+                    apartmentToSend.Images.Add(image);
+                }
             }
-            Apartment apartmentToSend = new Apartment();
-            //apartmentToSend.Address = apartment.apartment.Address;
-            //apartmentToSend.Description = apartment.apartment.Description;
-            //apartmentToSend.Price = apartment.apartment.Price;
-            //apartmentToSend.Lat = apartment.apartment.Lat;
-            //apartmentToSend.Lng = apartment.apartment.Lng;
-            apartmentToSend = apartment.apartment;
             var s = new ApartmentService();
-            return Ok(s.AddApartment(apartmentToSend, apartment.username));
+            return Ok(s.AddApartment(apartmentToSend, username));
         }
 
         [HttpDelete, Route("api/apartments")]
         public IHttpActionResult Delete(int id)
         {
             var s = new ApartmentService();
-            if(s.DeleteApartment(id))
+            if (s.DeleteApartment(id))
             {
                 return Ok("success");
             }
             return NotFound();
+        }
+
+
+        private byte[] convertFileToByteArray(HttpPostedFile File)
+        {
+            byte[] fileData = null;
+            using (var binaryReader = new BinaryReader(File.InputStream))
+            {
+                fileData = binaryReader.ReadBytes(File.ContentLength);
+            }
+
+            return fileData;
         }
     }
 }

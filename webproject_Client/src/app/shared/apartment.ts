@@ -1,3 +1,5 @@
+import { Image } from '../shared/image';
+
 export interface IApartment {
     Id: number;
     Address: string;
@@ -10,4 +12,5 @@ export interface IApartment {
     hasParking: boolean;
     hasAirConditining: boolean;
     hasFurniture: boolean;
+    Images: Image[];
 }

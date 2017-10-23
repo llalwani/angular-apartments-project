@@ -24,7 +24,7 @@ export class ApartmentsListService {
     if (this.apartments && this.apartments.length > 0) {
       return Observable.of(this.apartments);
     }
-    return this._httpClient.get(this.url,{}).map((result: IApartment[]) => {
+    return this._httpClient.get(this.url).map((result: IApartment[]) => {
       this.apartments = result;
       return result;
     }).catch(this.handleError);

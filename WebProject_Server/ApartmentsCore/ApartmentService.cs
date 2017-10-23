@@ -101,7 +101,7 @@ namespace ApartmentsCore
                 //IQueryable<Apartment> apartments = from e in db.Apartments select e;
                 // return apartments.ToList();
 
-                IQueryable<Apartment> query = db.Apartments.Include("User");
+                IQueryable<Apartment> query = db.Apartments.Include("User").Include("Images");
 
                 foreach (var apartment in query)
                 {
@@ -141,6 +141,25 @@ namespace ApartmentsCore
                 return DeletedApartment != null;
             }
         }
+
+
+        //public string[] getApartmentImages(int apartmentId)
+        //{
+        //    using (var db = new ApartmentsAppContext())
+        //    {
+        //        Apartment apartment = db.Apartments.Find(apartmentId);
+        //        if (apartment == null || apartment.Images == null || apartment.Images.Count ==0)
+        //        {
+        //            return null;
+        //        }
+        //        string[] resultArray = new string[apartment.Images.Count];
+        //        int index = 0;
+        //        foreach (Image image in apartment.Images) {
+        //            resultArray[index++] = System.Convert.ToBase64String(image.ImageData);
+        //        }
+        //        return resultArray;
+        //    }
+        //}
         #endregion
 
     }

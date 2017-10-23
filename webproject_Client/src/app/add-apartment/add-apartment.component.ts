@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {IApartment} from "../shared/apartment";
 import {Router} from "@angular/router";
 import {AddApartmentService} from "./add-apartment.service";
@@ -12,6 +12,9 @@ import {IMarker} from "../shared/mapsMarker";
   providers: [AddApartmentService]
 })
 export class AddApartmentComponent implements OnInit {
+
+  @ViewChild("fileInput") fileInput;
+
   loading = false;
   lat: number = 32;
   lng: number = 34.9;
@@ -35,7 +38,17 @@ export class AddApartmentComponent implements OnInit {
 
   addApartment() {
     this.loading = true;
-    this._addApartmentService.addApartment(this.model)
+    let fi = this.fileInput.nativeElement;
+    let fileToUpload;
+    if (fi.files && fi.files[0]) {
+      fileToUpload = fi.files[0];
+      if(fileToUpload.type !== 'image/jpeg' && fileToUpload.type !== 'image/png') {
+        alert('only images allowed');
+        this.loading = false;
+        return;
+      }
+    }
+    this._addApartmentService.addApartment(this.model, fileToUpload)
       .subscribe((addedApartment: IApartment) => {
         this._apartmentListService.addApartment(addedApartment);
         this._router.navigate(['/apartments']);
@@ -64,7 +77,9 @@ export class AddApartmentComponent implements OnInit {
       apartmentSize: 0,
       hasParking: false,
       hasAirConditining: false,
-      hasFurniture: false
+      hasFurniture: false,
+      Images: []
     };
   }
+
 }

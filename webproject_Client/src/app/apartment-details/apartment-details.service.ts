@@ -29,7 +29,7 @@ export class ApartmentDetailsService {
       this.dummyApartment.hasAirConditining = resultApartment[0].hasAirConditining;
       this.dummyApartment.hasFurniture = resultApartment[0].hasFurniture;
       this.dummyApartment.hasParking = resultApartment[0].hasParking;
-
+      this.dummyApartment.Images = _.cloneDeep(resultApartment[0].Images);
       return Observable.of(this.dummyApartment);
     });
     return Observable.of(this.dummyApartment);
@@ -63,7 +63,8 @@ export class ApartmentDetailsService {
       apartmentSize: 0,
       hasParking: false,
       hasAirConditining: false,
-      hasFurniture: false
+      hasFurniture: false,
+      Images: []
     };
   }
 }

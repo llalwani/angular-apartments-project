@@ -9,6 +9,6 @@ namespace WebProject.Models
     public class ApartmentWithUserModel
     {
         public Apartment apartment { get; set; }
-        public string username { get; set; } 
+        public string username { get; set; }
     }
 }
