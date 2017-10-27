@@ -1,0 +1,12 @@
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\ApartmentsCore.dll.config
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\ApartmentsCore.dll
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\ApartmentsCore.pdb
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\EntityFramework.dll
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\Newtonsoft.Json.dll
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\EntityFramework.xml
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\bin\Release\Newtonsoft.Json.xml
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\obj\Release\ApartmentsCore.csprojResolveAssemblyReference.cache
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\obj\Release\ApartmentsCore.dll
+C:\Users\Saif\Documents\visual studio 2015\Projects\Web\WebProject_Server\ApartmentsCore\obj\Release\ApartmentsCore.pdb

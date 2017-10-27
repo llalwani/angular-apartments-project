@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {ApartmentsListService} from "./apartments-list-service.service";
 import { IApartment } from '../shared/apartment';
 import {AlertService} from "../alert/alert.service";
+import {Marker} from "../shared/marker";
+import * as _ from 'lodash'
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-apartments-list',
@@ -17,6 +20,11 @@ export class ApartmentsListComponent implements OnInit {
 
   _listFilter: string;
   sortBy: string;
+  tabIndex: number = 0;
+
+  markers: Marker[];
+
+  isActive: boolean;
   get listFilter(): string {
     return this._listFilter;
   }
@@ -26,10 +34,12 @@ export class ApartmentsListComponent implements OnInit {
   }
 
   constructor(private _apartmentService: ApartmentsListService,
-              private _alertService: AlertService) {
+              private _alertService: AlertService,
+              private _router: Router) {
     this.sortBy = 'none';
   }
     ngOnInit() {
+    this.markers = [];
     this.onLoadApartments();
   }
 
@@ -39,6 +49,7 @@ export class ApartmentsListComponent implements OnInit {
         console.log(apartments);
         this.apartments = apartments;
         this.filteredApartments = apartments;
+        this.prepareMarkers();
       }, (error) => {
         if (error.status === 0) {
           this._alertService.error('Failed to connect to server!');
@@ -70,5 +81,34 @@ export class ApartmentsListComponent implements OnInit {
       this.sortBy = sort;
       this.sortBy === 'price' ? this.filteredApartments.sort(this.sortByPriceAsc): this.filteredApartments.sort(this.sortByAddress);
     }
+  }
+
+  prepareMarkers(): void {
+    _.forEach(this.apartments, (apartment: IApartment) => {
+      let m: Marker = {
+        lat: 0,
+        lng: 0
+      };
+      m.lat = apartment.Lat;
+      m.lng = apartment.Lng;
+      this.markers.push(m);
+    });
+  }
+
+  onSelectedIndexChange(newTabIndex) {
+      if(this.tabIndex !== newTabIndex) {
+        this.tabIndex = newTabIndex;
+      }
+  }
+  clickedMarker(marker: Marker) {
+    const apartment: IApartment = _.find(this.apartments, function(o) {
+        return o.Lng === marker.lng && o.Lat === marker.lat;
+    });
+    if(!apartment) {
+      alert('cant find apartment!!');
+      return;
+    }
+    this._router.navigate(['/apartments', apartment.Id]);
+
   }
 }
