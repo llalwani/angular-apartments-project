@@ -8,7 +8,7 @@
       <div class='col-md-6'>
         <div class='row'>
           <div class='col-md-3'>Address:</div>
-          <div class='col-md-6'>{{apartment.Address}}</div>
+          <div class='col-md-6'>{{apartment?.Address}}</div>
         </div>
         <!--<div class='row'>-->
           <!--<div class='col-md-3'>Code:</div>-->
@@ -16,21 +16,36 @@
         <!--</div>-->
         <div class='row'>
           <div class='col-md-3'>Description:</div>
-          <div class='col-md-6'>{{apartment.Description}}</div>
+          <div class='col-md-6'>{{apartment?.Description}}</div>
         </div>
         <div class='row'>
           <div class='col-md-3'>Price:</div>
-          <div class='col-md-6'>{{apartment.Price|currency:'USD':true}}</div>
+          <div class='col-md-6'>{{apartment?.Price|currency:'ILS':true}}</div>
         </div>
 
         <div class='row'>
           <div class='col-md-3'>Rooms Number:</div>
-          <div class='col-md-6'>{{apartment.RoomsNumber}}</div>
+          <div class='col-md-6'>{{apartment?.RoomsNumber}}</div>
         </div>
 
         <div class='row'>
           <div class='col-md-3'>Apartment Size:</div>
-          <div class='col-md-6'>{{apartment.apartmentSize}}</div>
+          <div class='col-md-6'>{{apartment?.apartmentSize}}</div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>
+        <section class="example-section">
+          <mat-checkbox class="example-margin" name="hasFurniture" [disabled]="true" [(ngModel)]="apartment.hasFurniture">Furnature</mat-checkbox>
+          <mat-checkbox class="example-margin" name="hasAirConditining" [disabled]="true" [(ngModel)]="apartment.hasAirConditining">Air conditining</mat-checkbox>
+          <mat-checkbox class="example-margin" name="hasParking" [disabled]="true" [(ngModel)]="apartment.hasParking">Parking</mat-checkbox>
+        </section>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Publisher:</div>
+          <div class='col-md-6'>{{apartment?.User?.FirstName}}</div>
         </div>
         <div *ngIf="apartment.Images && apartment.Images.length > 0">
           <img [src]="sanitizedImageData" />
@@ -40,8 +55,8 @@
           <div class='col-md-3'>Map:</div>
           <agm-map [latitude]="apartment.Lat" [longitude]="apartment.Lng">
             <agm-marker
-              [latitude]="apartment.Lat"
-              [longitude]="apartment.Lng">
+              [latitude]="apartment?.Lat"
+              [longitude]="apartment?.Lng">
 
               <!--<agm-info-window>-->
                 <!--<strong>InfoWindow content</strong>-->

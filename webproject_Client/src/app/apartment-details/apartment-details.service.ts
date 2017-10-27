@@ -25,11 +25,12 @@ export class ApartmentDetailsService {
       this.dummyApartment.Lat = resultApartment[0].Lat;
       this.dummyApartment.Lng = resultApartment[0].Lng;
       this.dummyApartment.RoomsNumber = resultApartment[0].RoomsNumber;
-      this.dummyApartment.apartmentSize = resultApartment[0].apartmentSize;
+      this.dummyApartment.apartmentSize = resultApartment[0].ApartmentSize;
       this.dummyApartment.hasAirConditining = resultApartment[0].hasAirConditining;
       this.dummyApartment.hasFurniture = resultApartment[0].hasFurniture;
       this.dummyApartment.hasParking = resultApartment[0].hasParking;
       this.dummyApartment.Images = _.cloneDeep(resultApartment[0].Images);
+      this.dummyApartment.User = _.cloneDeep(resultApartment[0].User);
       return Observable.of(this.dummyApartment);
     });
     return Observable.of(this.dummyApartment);

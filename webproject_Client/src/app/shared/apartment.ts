@@ -1,4 +1,5 @@
 import { Image } from '../shared/image';
+import { IUser } from '../shared/user';
 
 export interface IApartment {
     Id: number;
@@ -13,4 +14,5 @@ export interface IApartment {
     hasAirConditining: boolean;
     hasFurniture: boolean;
     Images: Image[];
+    User?: IUser;
 }

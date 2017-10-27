@@ -7,3 +7,14 @@ div.row {
   font-size: 16px;
   padding-bottom: 20px;
 }
+
+.example-section {
+  display: inline;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 40px 0 0;
+}
