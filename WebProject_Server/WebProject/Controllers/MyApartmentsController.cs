@@ -15,14 +15,12 @@ namespace WebProject.Controllers
         public IEnumerable<Apartment> Get(string username)
         {
             var s = new ApartmentService();
-            var m = new List<Apartment>();
             if (String.IsNullOrEmpty(username))
             {
                 //if not found return empty list
-                return m;
+                return null;
             }
-            s.LoadMyApartments(m, username);
-            return m;
+            return s.LoadMyApartments( username);
         }
     }
 }

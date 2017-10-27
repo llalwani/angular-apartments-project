@@ -110,20 +110,35 @@ namespace ApartmentsCore
             }
         }
 
-        public void LoadMyApartments(ICollection<Apartment> apartments, string username)
+        public List<Apartment> LoadMyApartments(string username)
         {
             using (var db = new ApartmentsAppContext())
             {
                 //IQueryable<Apartment> apartments = from e in db.Apartments select e;
                 // return apartments.ToList();
                 User user = db.Users.Where(myuser => myuser.Username == username).FirstOrDefault();
-                if(user!= null)
+                if (user != null)
                 {
-                    foreach (var apartment in user.Apartments)
+                   return new List<Apartment>(user.Apartments.Select(x => new Apartment
                     {
-                        apartments.Add(apartment);
-                    }
+                        Id = x.Id,
+                        Description = x.Description,
+                        Address = x.Address,
+                        Price = x.Price,
+                        //  ApartmentSize = x.ApartmentSize,
+                        // hasAirConditining = x.hasAirConditining,
+                        //x.hasFurniture,x.hasParking,x.RoomsNumber
+                    }).ToList());
+
                 }
+                return null;
+                //if(user!= null)
+                //{
+                //    foreach (var apartment in user.Apartments)
+                //    {
+                //        apartments.Add(apartment);
+                //    }
+                //}
             }
         }
 

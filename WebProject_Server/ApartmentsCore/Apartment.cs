@@ -50,6 +50,7 @@ namespace ApartmentsCore
 
         public virtual User User { get; set; }
 
+
         public virtual List<Image> Images { get; set; }
 
     }

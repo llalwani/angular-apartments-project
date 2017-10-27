@@ -1,5 +1,6 @@
 agm-map {
-  height: 150px;
+  height: 300px;
+  width: 100%;
 }
 
 .example-section {
@@ -7,4 +8,8 @@ agm-map {
   align-content: center;
   align-items: center;
   height: 60px;
+}
+
+.example-margin {
+  margin: 0 80px 0 0;
 }

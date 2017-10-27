@@ -29,22 +29,28 @@
       <div *ngIf="f.submitted && !apartmentSize.valid" class="help-block">Apartment size is required</div>
     </div>
 
-    <section class="checkbox-section">
+    <section class="example-section">
       <mat-checkbox class="example-margin" name="hasFurniture" [(ngModel)]="model.hasFurniture">Furnature</mat-checkbox>
       <mat-checkbox class="example-margin" name="hasAirConditining" [(ngModel)]="model.hasAirConditining">Air conditining</mat-checkbox>
       <mat-checkbox class="example-margin" name="hasParking" [(ngModel)]="model.hasParking">Parking</mat-checkbox>
     </section>
+    <br>
+    <br>
+    <label>Upload Image:</label>
 
     <input #fileInput type="file"/>
 
-    <mat-expansion-panel hideToggle="true">
+    <br>
+    <br>
+
+    <mat-expansion-panel [expanded]="true" hideToggle="true" >
       <mat-expansion-panel-header>
         <mat-panel-title>
           Location
         </mat-panel-title>
         <mat-panel-description>
           Select the apartment location
-          <mat-icon>map</mat-icon>
+          <!--<mat-icon>map</mat-icon>-->
         </mat-panel-description>
       </mat-expansion-panel-header>
       <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="mapClicked($event)">
