@@ -87,10 +87,12 @@ export class ApartmentsListComponent implements OnInit {
     _.forEach(this.apartments, (apartment: IApartment) => {
       let m: Marker = {
         lat: 0,
-        lng: 0
+        lng: 0,
+        label: ""
       };
       m.lat = apartment.Lat;
       m.lng = apartment.Lng;
+      m.label = apartment.Price.toString();
       this.markers.push(m);
     });
   }
