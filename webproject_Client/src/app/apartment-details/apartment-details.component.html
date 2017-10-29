@@ -11,8 +11,8 @@
           <div class='col-md-6'>{{apartment?.Address}}</div>
         </div>
         <!--<div class='row'>-->
-          <!--<div class='col-md-3'>Code:</div>-->
-          <!--<div class='col-md-6'>{{apartment.apartmentCode | lowercase | convertToSpaces: '-'}}</div>-->
+        <!--<div class='col-md-3'>Code:</div>-->
+        <!--<div class='col-md-6'>{{apartment.apartmentCode | lowercase | convertToSpaces: '-'}}</div>-->
         <!--</div>-->
         <div class='row'>
           <div class='col-md-3'>Description:</div>
@@ -35,11 +35,17 @@
 
         <div class='row'>
           <div class='col-md-3'>
-        <section class="example-section">
-          <mat-checkbox class="example-margin" name="hasFurniture" [disabled]="true" [(ngModel)]="apartment.hasFurniture">Furnature</mat-checkbox>
-          <mat-checkbox class="example-margin" name="hasAirConditining" [disabled]="true" [(ngModel)]="apartment.hasAirConditining">Air conditining</mat-checkbox>
-          <mat-checkbox class="example-margin" name="hasParking" [disabled]="true" [(ngModel)]="apartment.hasParking">Parking</mat-checkbox>
-        </section>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" name="hasFurniture" [disabled]="true"
+                            [(ngModel)]="apartment.hasFurniture">Furnature
+              </mat-checkbox>
+              <mat-checkbox class="example-margin" name="hasAirConditining" [disabled]="true"
+                            [(ngModel)]="apartment.hasAirConditining">Air conditining
+              </mat-checkbox>
+              <mat-checkbox class="example-margin" name="hasParking" [disabled]="true"
+                            [(ngModel)]="apartment.hasParking">Parking
+              </mat-checkbox>
+            </section>
           </div>
         </div>
 
@@ -47,8 +53,14 @@
           <div class='col-md-3'>Publisher:</div>
           <div class='col-md-6'>{{apartment?.User?.FirstName}}</div>
         </div>
+
+
         <div *ngIf="apartment.Images && apartment.Images.length > 0">
-          <img [src]="sanitizedImageData" />
+          <div class='row'>
+            <div class='col-md-3'>Picture:</div>
+            <img [src]="sanitizedImageData"/>
+
+          </div>
         </div>
 
         <div class='row'>
@@ -58,29 +70,13 @@
               [latitude]="apartment?.Lat"
               [longitude]="apartment?.Lng">
 
-              <!--<agm-info-window>-->
-                <!--<strong>InfoWindow content</strong>-->
-              <!--</agm-info-window>-->
 
             </agm-marker>
           </agm-map>
         </div>
-        <!--<div class='row'>-->
-          <!--<div class='col-md-3'>5 Star Rating:</div>-->
-          <!--<div class='col-md-6'>-->
-            <!--<pm-star [rating]='apartment.starRating'>-->
-            <!--</pm-star>-->
-          <!--</div>-->
-        <!--</div>-->
+
       </div>
 
-      <!--<div class='col-md-6'>-->
-        <!--<img class='center-block img-responsive'-->
-             <!--[style.width.px]='200'-->
-             <!--[style.margin.px]='2'-->
-             <!--[src]='apartment.imageUrl'-->
-             <!--[title]='apartment.apartmentName'>-->
-      <!--</div>-->
     </div>
   </div>
 
@@ -90,3 +86,7 @@
     </a>
   </div>
 </div>
+
+
+
+
