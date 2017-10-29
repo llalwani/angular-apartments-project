@@ -1,12 +1,13 @@
   <!--<div class='panel-heading'>-->
     <!--{{pageTitle}}-->
   <!--</div>-->
+  <div class='panel-body' style="margin-left: 40px; margin-right: 40px;">
+
   <mat-tab-group (selectedIndexChange)="onSelectedIndexChange($event)">
     <mat-tab label="Find Apartments by search">
       <div style="padding-left: 20px; padding-right: 20px; margin: 0 auto; padding-top:5px; height: 75%;">
 
-      <div class='panel-body' style="margin-left: 40px; margin-right: 40px;">
-        <div class='row'>
+        <div class='row' style="padding-top: 10px">
           <div class='col-md-7'>Search by Address:
             <!--<div class='col-md-4'>-->
             <input class="search" type='text' [(ngModel)]='listFilter'/>
@@ -77,12 +78,11 @@
           <tr *ngFor="let apartment of sortedApartments">
             <td><a [routerLink]="['/apartments', apartment.Id]">{{apartment.Address}}</a></td>
             <td>{{apartment.Description}}</td>
-            <td>{{ apartment.Price }}</td>
+            <td>{{ apartment.Price | currency:'ILS':true:'1.2-2'}}</td>
             <td>{{ apartment.ApartmentSize }}</td>
             <td>{{ apartment.RoomsNumber }}</td>
           </tr>
         </table>
-      </div>
 
 
 </div>
@@ -107,3 +107,4 @@
 
     </mat-tab>
   </mat-tab-group>
+  </div>

@@ -106,7 +106,7 @@ export class ApartmentsListComponent implements OnInit {
         case 'address': return this.compare(a.Address, b.Address, isAsc);
         case 'description': return this.compare(+a.Description, +b.Description, isAsc);
         case 'price': return this.compare(+a.Price, +b.Price, isAsc);
-        case 'aptSize': return this.compare(+a.apartmentSize, +b.apartmentSize, isAsc);
+        case 'aptSize': return this.compare(+a.ApartmentSize, +b.ApartmentSize, isAsc);
         case 'roomsNumber': return this.compare(+a.RoomsNumber, +b.RoomsNumber, isAsc);
 
         default: return 0;

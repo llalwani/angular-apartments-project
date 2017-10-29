@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c54ac0-0990-4b2e-8133-cc08738431e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.html" afterPath="$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.css" afterPath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/.vs/WebProject_Server/v14/.suo" afterPath="$PROJECT_DIR$/../WebProject_Server/.vs/WebProject_Server/v14/.suo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext.mdf" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext.mdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext_log.ldf" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext_log.ldf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts" afterPath="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts" afterPath="$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html" afterPath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts" afterPath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/shared/apartment.ts" afterPath="$PROJECT_DIR$/src/app/shared/apartment.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -21,45 +25,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="apartment-details.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="apartment.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/shared/apartment.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="17" />
+              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/register/register.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apartments-list.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="apartments-list.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="80" column="30" lean-forward="false" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+            <state relative-caret-position="225">
+              <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#mat-tab#0;n#mat-tab-group#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#mat-tab#0;n#mat-tab-group#0;n#!!top" expanded="true" />
-                <marker date="1509290263237" expanded="false" signature="794:813" ph="..." />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#mat-tab#0;n#mat-tab-group#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1509291545502" expanded="false" signature="817:836" ph="..." />
               </folding>
             </state>
           </provider>
@@ -68,8 +52,8 @@
       <file leaf-file-name="apartments-list.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="108" column="78" lean-forward="false" selection-start-line="108" selection-start-column="78" selection-end-line="108" selection-end-column="78" />
+            <state relative-caret-position="-2329">
+              <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -85,11 +69,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="apartment-details.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-apartment.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="74" column="12" lean-forward="false" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>newModel</find>
       <find>.post</find>
       <find>.get</find>
       <find>style.css</find>
@@ -119,6 +122,7 @@
       <find>a</find>
       <find>apartment</find>
       <find>ApartmentSi</find>
+      <find>aptSize</find>
     </findStrings>
     <replaceStrings>
       <replace>apartment</replace>
@@ -163,24 +167,24 @@
         <option value="$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.css" />
-        <option value="$PROJECT_DIR$/src/app/shared/apartment.ts" />
         <option value="$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.css" />
         <option value="$PROJECT_DIR$/firebase.json" />
         <option value="$PROJECT_DIR$/src/environments/environment.prod.ts" />
         <option value="$PROJECT_DIR$/src/environments/environment.ts" />
-        <option value="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts" />
         <option value="$PROJECT_DIR$/src/app/shared/marker.ts" />
         <option value="$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.html" />
         <option value="$PROJECT_DIR$/src/app/shared/user.ts" />
         <option value="$PROJECT_DIR$/src/app/register/register.component.html" />
         <option value="$PROJECT_DIR$/src/app/register/register.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts" />
         <option value="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.html" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.css" />
-        <option value="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html" />
         <option value="$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.html" />
+        <option value="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/shared/apartment.ts" />
+        <option value="$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html" />
       </list>
     </option>
   </component>
@@ -280,7 +284,7 @@
     <property name="node.js.selected.package.tslint" value="C:\Users\Saif\WebstormProjects\app\webproject\node_modules\tslint" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="SearchEverywhereHistoryKey" value="apartment-deta&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.ts&#10;apartment.ts&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/shared/apartment.ts&#10;apartment-det&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;apartment-list&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.css&#10;apartments-list&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;app.mod&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;add-apar&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;apartment-d&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.ts&#10;register&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.ts&#10;regist&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.html&#10;apartment-details&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;user.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/shared/user.ts&#10;apartment-details.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;my-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/my-apartments/my-apartments.component.html&#10;apartment&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;apartment-list.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;add-apa&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;add-apart&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;app.module&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;environ&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.prod.ts&#10;enviro&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.ts&#10;apartment-detai&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.css&#10;add-ap&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;app.c&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;add-apartment&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.css&#10;apartment-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;apartments-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;app.compo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;add-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;app.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;add-a&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.css&#10;apartment-list.ser&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list-service.service.ts&#10;apartment-detail&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;apartmentlist&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.ts&#10;apartments-li&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;login.compon&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.html&#10;EN&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.ts&#10;envi&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.ts&#10;apartment-details.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;add&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;app.comp&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;app.m&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;package&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/package.json&#10;ro&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.routing.ts&#10;app.modu&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;app&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;pack&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/package.json&#10;app.compon&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;add-apartm&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;my-apart&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/my-apartments/my-apartments.component.ts" />
+    <property name="SearchEverywhereHistoryKey" value="add-apar&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;apartment-deta&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.ts&#10;apartment.ts&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/shared/apartment.ts&#10;apartment-det&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;apartment-list&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.css&#10;apartments-list&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;app.mod&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;apartment-d&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.ts&#10;register&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.ts&#10;regist&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/register/register.component.html&#10;apartment-details&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;user.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/shared/user.ts&#10;apartment-details.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;my-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/my-apartments/my-apartments.component.html&#10;apartment&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.service.ts&#10;apartment-list.&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;add-apa&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;add-apart&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;app.module&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;environ&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.prod.ts&#10;enviro&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.ts&#10;apartment-detai&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.css&#10;add-ap&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;app.c&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;add-apartment&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.css&#10;apartment-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;apartments-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;app.compo&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.html&#10;add-&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;app.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;add-a&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.css&#10;apartment-list.ser&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list-service.service.ts&#10;apartment-detail&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;apartmentlist&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.ts&#10;apartments-li&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartments-list/apartments-list.component.html&#10;login.compon&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/login/login.component.html&#10;EN&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.ts&#10;envi&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/environments/environment.ts&#10;apartment-details.com&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/apartment-details/apartment-details.component.html&#10;add&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.ts&#10;app.comp&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;app.m&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;package&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/package.json&#10;ro&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.routing.ts&#10;app.modu&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;app&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.module.ts&#10;pack&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/package.json&#10;app.compon&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/app.component.ts&#10;add-apartm&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/add-apartment/add-apartment.component.html&#10;my-apart&#9;FILE&#9;file://C:/Users/Saif/Documents/Visual Studio 2015/Projects/Web/webproject_Client/src/app/my-apartments/my-apartments.component.ts" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -336,15 +340,16 @@
       <workItem from="1509089938460" duration="2908000" />
       <workItem from="1509099032467" duration="20852000" />
       <workItem from="1509190774104" duration="4252000" />
-      <workItem from="1509271236014" duration="8558000" />
+      <workItem from="1509271236014" duration="9763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178949000" />
+    <option name="totallyTimeSpent" value="180154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -355,7 +360,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29580575" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29580575" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -622,14 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/my-apartments/my-apartments.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -662,16 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -679,14 +666,6 @@
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/register/register.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,10 +677,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="108" column="78" lean-forward="false" selection-start-line="108" selection-start-column="78" selection-end-line="108" selection-end-column="78" />
+        <state relative-caret-position="-2329">
+          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -709,7 +704,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/shared/apartment.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="17" />
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -722,23 +717,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/apartment-details/apartment-details.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="80" column="30" lean-forward="false" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#mat-tab#0;n#mat-tab-group#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#mat-tab#0;n#mat-tab-group#0;n#!!top" expanded="true" />
-            <marker date="1509290263237" expanded="false" signature="794:813" ph="..." />
-          </folding>
+        <state relative-caret-position="321">
+          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/apartment-details/apartment-details.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/add-apartment/add-apartment.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+        <state relative-caret-position="525">
+          <caret line="74" column="12" lean-forward="false" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#mat-tab#0;n#mat-tab-group#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1509291545502" expanded="false" signature="817:836" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

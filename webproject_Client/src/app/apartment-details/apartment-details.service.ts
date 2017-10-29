@@ -48,7 +48,7 @@ export class ApartmentDetailsService {
       Lat: 0,
       Lng: 0,
       RoomsNumber: 0,
-      apartmentSize: 0,
+      ApartmentSize: 0,
       hasParking: false,
       hasAirConditining: false,
       hasFurniture: false,

@@ -9,7 +9,7 @@ export interface IApartment {
     Lat: number;
     Lng: number;
     RoomsNumber: number;
-    apartmentSize: number;
+    ApartmentSize: number;
     hasParking: boolean;
     hasAirConditining: boolean;
     hasFurniture: boolean;

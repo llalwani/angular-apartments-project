@@ -74,7 +74,7 @@ export class AddApartmentComponent implements OnInit {
       Lat: this.marker.lat,
       Lng: this.marker.lng,
       RoomsNumber: 0,
-      apartmentSize: 0,
+      ApartmentSize: 0,
       hasParking: false,
       hasAirConditining: false,
       hasFurniture: false,
