@@ -5,66 +5,86 @@
     <mat-tab label="Find Apartments by search">
       <div style="padding-left: 20px; padding-right: 20px; margin: 0 auto; padding-top:5px; height: 75%;">
 
-      <div class='panel-body'>
+      <div class='panel-body' style="margin-left: 40px; margin-right: 40px;">
         <div class='row'>
           <div class='col-md-7'>Search by Address:
             <!--<div class='col-md-4'>-->
-            <input class="search" type='text' [(ngModel)]='listFilter' style="margin-left: 60px"/>
+            <input class="search" type='text' [(ngModel)]='listFilter'/>
             <!--</div>-->
           </div>
         </div>
-        <div class="row">
-          <div class='col-md-7'>
-            Sort by:
-            <div class="btn-group btn-group-sm" style="margin-left: 133px;">
-              <button class="btn btn-default" [class.active] = "sortBy==='none'" (click)="changeSorting('none');">None</button>
-              <button class="btn btn-default" [class.active] = "sortBy ==='price'" (click)="changeSorting('price');">Price</button>
+        <!--<div class="row">-->
+          <!--<div class='col-md-7'>-->
+            <!--Sort by:-->
+            <!--<div class="btn-group btn-group-sm" style="margin-left: 133px;">-->
+              <!--<button class="btn btn-default" [class.active] = "sortBy==='none'" (click)="changeSorting('none');">None</button>-->
+              <!--<button class="btn btn-default" [class.active] = "sortBy ==='price'" (click)="changeSorting('price');">Price</button>-->
 
-            </div>
-          </div>
-        </div>
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
         <!--<div class='row'>-->
         <!--<div class='col-md-6'>-->
         <!--<h3>Filtered by: {{listFilter}} </h3>-->
         <!--</div>-->
         <!--</div>-->
-        <div class='table-responsive'>
-          <table class='table table-striped table-responsive '
-                 *ngIf='apartments && apartments.length'>
-            <thead>
-            <tr>
-              <!--<th>-->
-              <!--<button class='btn btn-primary'-->
-              <!--(click)='toggleImage()'>-->
-              <!--{{showImage ? 'Hide' : 'Show'}} Image-->
-              <!--</button>-->
-              <!--</th>-->
-              <th>Address</th>
-              <th>Description</th>
-              <th>Price</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor='let apartment of filteredApartments'>
-              <!--<td>-->
-              <!--<img *ngIf='showImage'-->
-              <!--[src]='product.imageUrl'-->
-              <!--[title]='product.productName'-->
-              <!--[style.width.px]='imageWidth'-->
-              <!--[style.margin.px]='imageMargin'>-->
-              <!--</td>-->
-              <!--<td><a [routerLink]="['/products', product.productId]">-->
-              <!--{{ product.productName }}-->
-              <!--</a>-->
-              <!--</td>-->
-              <td><a [routerLink]="['/apartments', apartment.Id]">{{ apartment.Address }}</a></td>
-              <td>{{ apartment.Description | lowercase }}</td>
-              <td>{{ apartment.Price | currency:'ILS':true:'1.2-2'}}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
+        <!--<div class='table-responsive'>-->
+          <!--<table class='table table-striped table-responsive '-->
+                 <!--*ngIf='apartments && apartments.length'>-->
+            <!--<thead>-->
+            <!--<tr>-->
+              <!--&lt;!&ndash;<th>&ndash;&gt;-->
+              <!--&lt;!&ndash;<button class='btn btn-primary'&ndash;&gt;-->
+              <!--&lt;!&ndash;(click)='toggleImage()'>&ndash;&gt;-->
+              <!--&lt;!&ndash;{{showImage ? 'Hide' : 'Show'}} Image&ndash;&gt;-->
+              <!--&lt;!&ndash;</button>&ndash;&gt;-->
+              <!--&lt;!&ndash;</th>&ndash;&gt;-->
+              <!--<th>Address</th>-->
+              <!--<th>Description</th>-->
+              <!--<th>Price</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr *ngFor='let apartment of sortedApartments'>-->
+              <!--&lt;!&ndash;<td>&ndash;&gt;-->
+              <!--&lt;!&ndash;<img *ngIf='showImage'&ndash;&gt;-->
+              <!--&lt;!&ndash;[src]='product.imageUrl'&ndash;&gt;-->
+              <!--&lt;!&ndash;[title]='product.productName'&ndash;&gt;-->
+              <!--&lt;!&ndash;[style.width.px]='imageWidth'&ndash;&gt;-->
+              <!--&lt;!&ndash;[style.margin.px]='imageMargin'>&ndash;&gt;-->
+              <!--&lt;!&ndash;</td>&ndash;&gt;-->
+              <!--&lt;!&ndash;<td><a [routerLink]="['/products', product.productId]">&ndash;&gt;-->
+              <!--&lt;!&ndash;{{ product.productName }}&ndash;&gt;-->
+              <!--&lt;!&ndash;</a>&ndash;&gt;-->
+              <!--&lt;!&ndash;</td>&ndash;&gt;-->
+              <!--<td><a [routerLink]="['/apartments', apartment.Id]">{{ apartment.Address }}</a></td>-->
+              <!--<td>{{ apartment.Description | lowercase }}</td>-->
+              <!--<td>{{ apartment.Price | currency:'ILS':true:'1.2-2'}}</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+          <!--</table>-->
+        <!--</div>-->
+
+        <table class='table table-striped table-responsive ' matSort (matSortChange)="sortData($event)">
+          <tr>
+            <th mat-sort-header="address">Address</th>
+            <th mat-sort-header="description">Description</th>
+            <th mat-sort-header="price">Price</th>
+            <th mat-sort-header="aptSize">Apartment size(meter)</th>
+            <th mat-sort-header="roomsNumber">Rooms number</th>
+          </tr>
+
+          <tr *ngFor="let apartment of sortedApartments">
+            <td><a [routerLink]="['/apartments', apartment.Id]">{{apartment.Address}}</a></td>
+            <td>{{apartment.Description}}</td>
+            <td>{{ apartment.Price }}</td>
+            <td>{{ apartment.ApartmentSize }}</td>
+            <td>{{ apartment.RoomsNumber }}</td>
+          </tr>
+        </table>
       </div>
+
+
 </div>
 <!--<div *ngIf='errorMessage' class='alert alert-danger'>-->
 <!--Error: {{ errorMessage }}-->

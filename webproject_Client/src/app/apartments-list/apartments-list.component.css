@@ -21,9 +21,16 @@ input.search {
   width: 235px;
   box-sizing: content-box;
   padding: 8px 10px 10px;
-  margin: 0;
   outline: 0;
   border: 1px solid #d5d6d9;
   border-radius: 4px 0 0 4px;
-  border-right: 0;
+  margin-left: 10px;
+}
+
+.mat-sort-header-container {
+  align-items: center;
+}
+
+table {
+  margin-top: 30px;
 }

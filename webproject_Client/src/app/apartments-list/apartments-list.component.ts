@@ -5,6 +5,7 @@ import {AlertService} from "../alert/alert.service";
 import {Marker} from "../shared/marker";
 import * as _ from 'lodash'
 import {Router} from "@angular/router";
+import {Sort} from "@angular/material";
 
 @Component({
   selector: 'app-apartments-list',
@@ -19,24 +20,21 @@ export class ApartmentsListComponent implements OnInit {
   filteredApartments: IApartment[];
 
   _listFilter: string;
-  sortBy: string;
   tabIndex: number = 0;
 
   markers: Marker[];
-
-  isActive: boolean;
+  sortedApartments: IApartment[];
   get listFilter(): string {
     return this._listFilter;
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filteredApartments = this.listFilter ? this.performFilter(this.listFilter) : this.apartments;
+    this.sortedApartments = this.listFilter ? this.performFilter(this.listFilter) : this.apartments;
   }
 
   constructor(private _apartmentService: ApartmentsListService,
               private _alertService: AlertService,
               private _router: Router) {
-    this.sortBy = 'none';
   }
     ngOnInit() {
     this.markers = [];
@@ -49,6 +47,7 @@ export class ApartmentsListComponent implements OnInit {
         console.log(apartments);
         this.apartments = apartments;
         this.filteredApartments = apartments;
+        this.sortedApartments = this.apartments.slice();
         this.prepareMarkers();
       }, (error) => {
         if (error.status === 0) {
@@ -62,25 +61,6 @@ export class ApartmentsListComponent implements OnInit {
     filterBy = filterBy.toLocaleLowerCase();
     return this.apartments.filter((apartment: IApartment) =>
       apartment.Address.toLocaleLowerCase().indexOf(filterBy) !== -1);
-  }
-
-  private sortByPriceAsc(s1: IApartment, s2: IApartment) {
-    if(s1.Price > s2.Price) return 1;
-    else if(s1.Price === s2.Price) return 0;
-    else return -1;
-  }
-
-  private sortByAddress(s1: IApartment, s2: IApartment) {
-    if(s1.Address > s2.Address) return 1;
-    else if(s1.Address === s2.Address) return 0;
-    return -1;
-  }
-
-  changeSorting(sort: string) {
-    if(sort !== this.sortBy) {
-      this.sortBy = sort;
-      this.sortBy === 'price' ? this.filteredApartments.sort(this.sortByPriceAsc): this.filteredApartments.sort(this.sortByAddress);
-    }
   }
 
   prepareMarkers(): void {
@@ -111,6 +91,30 @@ export class ApartmentsListComponent implements OnInit {
       return;
     }
     this._router.navigate(['/apartments', apartment.Id]);
+  }
 
+  sortData(sort: Sort) {
+    const data = this.apartments.slice();
+    if (!sort.active || sort.direction == '') {
+      this.sortedApartments = data;
+      return;
+    }
+
+    this.sortedApartments = data.sort((a, b) => {
+      let isAsc = sort.direction == 'asc';
+      switch (sort.active) {
+        case 'address': return this.compare(a.Address, b.Address, isAsc);
+        case 'description': return this.compare(+a.Description, +b.Description, isAsc);
+        case 'price': return this.compare(+a.Price, +b.Price, isAsc);
+        case 'aptSize': return this.compare(+a.apartmentSize, +b.apartmentSize, isAsc);
+        case 'roomsNumber': return this.compare(+a.RoomsNumber, +b.RoomsNumber, isAsc);
+
+        default: return 0;
+      }
+    });
+  }
+
+   private compare(a, b, isAsc) {
+    return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
   }
 }
