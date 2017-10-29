@@ -50,8 +50,13 @@
         </div>
 
         <div class='row'>
-          <div class='col-md-3'>Publisher:</div>
-          <div class='col-md-6'>{{apartment?.User?.FirstName}}</div>
+          <div class='col-md-3'>Publisher Name:</div>
+          <div class='col-md-6'>{{apartment?.User?.FirstName + ' ' + apartment?.User?.LastName}}</div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Publisher Email:</div>
+          <div class='col-md-6'><a href='mailto: {{apartment?.User?.Email}}'>{{apartment?.User?.Email}}</a></div>
         </div>
 
 

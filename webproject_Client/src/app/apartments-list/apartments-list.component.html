@@ -3,7 +3,7 @@
   <!--</div>-->
   <mat-tab-group (selectedIndexChange)="onSelectedIndexChange($event)">
     <mat-tab label="Find Apartments by search">
-      <div style="margin: 0 auto; padding-top:5px; height: 75%;">
+      <div style="padding-left: 20px; padding-right: 20px; margin: 0 auto; padding-top:5px; height: 75%;">
 
       <div class='panel-body'>
         <div class='row'>
@@ -80,9 +80,6 @@
           [latitude]="m.lat"
           [longitude]="m.lng"
            [label]="m.label">
-          <!--<agm-info-window>-->
-          <!--<strong>InfoWindow content</strong>-->
-          <!--</agm-info-window>-->
 
         </agm-marker>
       </agm-map>

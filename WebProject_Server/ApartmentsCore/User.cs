@@ -26,6 +26,9 @@ namespace ApartmentsCore
         [DataMember]
         public string LastName { get; set; }
 
+        [DataMember]
+        public string Email { get; set; }
+
 
         public virtual List<Apartment> Apartments { get; set; }
     }

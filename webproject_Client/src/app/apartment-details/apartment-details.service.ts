@@ -17,20 +17,7 @@ export class ApartmentDetailsService {
           return o.Id === id;
         });
 
-      //  _.cloneDeep(this.dummyApartment,resultApartment[0]);
-        this.dummyApartment.Id = resultApartment[0].Id;
-      this.dummyApartment.Price = resultApartment[0].Price;
-      this.dummyApartment.Description = resultApartment[0].Description;
-      this.dummyApartment.Address = resultApartment[0].Address;
-      this.dummyApartment.Lat = resultApartment[0].Lat;
-      this.dummyApartment.Lng = resultApartment[0].Lng;
-      this.dummyApartment.RoomsNumber = resultApartment[0].RoomsNumber;
-      this.dummyApartment.apartmentSize = resultApartment[0].ApartmentSize;
-      this.dummyApartment.hasAirConditining = resultApartment[0].hasAirConditining;
-      this.dummyApartment.hasFurniture = resultApartment[0].hasFurniture;
-      this.dummyApartment.hasParking = resultApartment[0].hasParking;
-      this.dummyApartment.Images = _.cloneDeep(resultApartment[0].Images);
-      this.dummyApartment.User = _.cloneDeep(resultApartment[0].User);
+      this.dummyApartment = _.cloneDeep(resultApartment[0]);
       return Observable.of(this.dummyApartment);
     });
     return Observable.of(this.dummyApartment);
