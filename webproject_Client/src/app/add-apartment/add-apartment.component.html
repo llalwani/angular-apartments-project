@@ -38,8 +38,10 @@
     <br>
     <label>Upload Image:&nbsp;</label>
 
+    <input disabled= "true" type="text" name="file_name" id="file_name">
     <label class="btn btn-default btn-file">
-      Browse <input #fileInput type="file" style="display: none;">
+
+      Browse <input #fileInput name="file_name" type="file" onchange="document.getElementById('file_name').value = this.value.split('\\').pop().split('/').pop()" style="display: none;">
     </label>
 
     <br>

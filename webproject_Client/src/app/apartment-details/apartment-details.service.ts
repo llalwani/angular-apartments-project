@@ -21,7 +21,6 @@ export class ApartmentDetailsService {
       this.dummyApartment = _.cloneDeep(resultApartment[0]);
       return this.dummyApartment;
     });
-   // return Observable.of(this.dummyApartment);
   }
 
   private handleError(err: HttpErrorResponse) {
