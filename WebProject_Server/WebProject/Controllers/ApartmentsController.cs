@@ -25,6 +25,14 @@ namespace WebProject.Controllers
             return m;
         }
 
+        [HttpGet, Route("api/apartments")]
+        public Apartment Get(int id)
+        {
+            var s = new ApartmentService();
+            var m = new List<Apartment>();
+            return s.getApartment(id);
+        }
+
         //[HttpPost, Route("api/apartments")]
         //public IHttpActionResult Post(ApartmentWithUserModel apartment)
         //{

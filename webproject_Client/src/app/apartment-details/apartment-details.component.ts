@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   selector: 'app-apartment-details',
   templateUrl: './apartment-details.component.html',
   styleUrls: ['./apartment-details.component.css'],
-  providers: [ApartmentDetailsService]
+  providers: []
 })
 export class ApartmentDetailsComponent implements OnInit {
 

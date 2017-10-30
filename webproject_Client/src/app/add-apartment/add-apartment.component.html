@@ -25,7 +25,7 @@
 
     <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !price.valid }">
       <label for="apartmentSize">Apartment Size(In meters)</label>
-      <input type="number" min="1" class="form-control" name="apartmentSize" [(ngModel)]="model.apartmentSize" #apartmentSize="ngModel" required />
+      <input type="number" min="1" class="form-control" name="apartmentSize" [(ngModel)]="model.ApartmentSize" #apartmentSize="ngModel" required />
       <div *ngIf="f.submitted && !apartmentSize.valid" class="help-block">Apartment size is required</div>
     </div>
 

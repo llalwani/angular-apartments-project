@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import { HttpErrorResponse} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {ApartmentsListService} from "../apartments-list/apartments-list-service.service";
 import { IApartment } from '../shared/apartment';
 import * as _ from "lodash";
@@ -9,18 +9,19 @@ import * as _ from "lodash";
 export class ApartmentDetailsService {
 
   private dummyApartment: IApartment = this.getEmptyModel();
+
   constructor(private _aparmentListService: ApartmentsListService) { }
 
   getApartment(id: number): Observable<IApartment> {
-    this._aparmentListService.getApartments().subscribe((apartments: IApartment[]) => {
-        const resultApartment = _.filter(apartments, function(o) {
-          return o.Id === id;
-        });
+    return this._aparmentListService.getApartments().map((apartments: IApartment[]) => {
 
+      const resultApartment = _.filter(apartments, function (o) {
+        return o.Id === id;
+      });
       this.dummyApartment = _.cloneDeep(resultApartment[0]);
-      return Observable.of(this.dummyApartment);
+      return this.dummyApartment;
     });
-    return Observable.of(this.dummyApartment);
+   // return Observable.of(this.dummyApartment);
   }
 
   private handleError(err: HttpErrorResponse) {

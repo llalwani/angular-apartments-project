@@ -110,6 +110,14 @@ namespace ApartmentsCore
             }
         }
 
+        public Apartment getApartment(int apartment_id)
+        {
+            using (var db = new ApartmentsAppContext())
+            {
+                return db.Apartments.Include("User").Include("Images").FirstOrDefault(x => x.Id == apartment_id);
+            }
+        }
+
         public List<Apartment> LoadMyApartments(string username)
         {
             using (var db = new ApartmentsAppContext())
@@ -176,6 +184,5 @@ namespace ApartmentsCore
         //    }
         //}
         #endregion
-
     }
 }

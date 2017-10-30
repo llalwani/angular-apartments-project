@@ -23,6 +23,7 @@ import {MyApartmentsService} from "./my-apartments/my-apartments.service";
 import { AgmCoreModule } from '@agm/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ApartmentDetailsService} from "./apartment-details/apartment-details.service";
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
               AuthService,
               MyApartmentsService,
               ApartmentsListService,
+              ApartmentDetailsService,
               AlertService],
   bootstrap: [AppComponent]
 })
