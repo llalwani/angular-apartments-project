@@ -13,6 +13,7 @@ export interface IApartment {
     hasParking: boolean;
     hasAirConditining: boolean;
     hasFurniture: boolean;
+    SellerPhoneNummber: string;
     Images: Image[];
     User?: IUser;
 }

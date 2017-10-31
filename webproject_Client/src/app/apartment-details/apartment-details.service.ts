@@ -52,6 +52,7 @@ export class ApartmentDetailsService {
       hasParking: false,
       hasAirConditining: false,
       hasFurniture: false,
+      SellerPhoneNummber: '',
       Images: []
     };
   }

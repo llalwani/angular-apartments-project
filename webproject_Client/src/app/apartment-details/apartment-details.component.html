@@ -59,6 +59,11 @@
           <div class='col-md-6'><a href='mailto: {{apartment?.User?.Email}}'>{{apartment?.User?.Email}}</a></div>
         </div>
 
+        <div class='row'>
+          <div class='col-md-3'>Publisher Phone number:</div>
+          <div class='col-md-6'>{{apartment?.SellerPhoneNummber}}</div>
+        </div>
+
 
         <div *ngIf="apartment.Images && apartment.Images.length > 0">
           <div class='row'>

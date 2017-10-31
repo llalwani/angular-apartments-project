@@ -24,6 +24,10 @@ namespace ApartmentsCore
         [DataMember]
         public double Price { get; set; }
 
+        [DataMember]
+        public string SellerPhoneNummber { get; set; }
+
+
         //--Google maps location
         [DataMember]
         public double Lat { get; set; }

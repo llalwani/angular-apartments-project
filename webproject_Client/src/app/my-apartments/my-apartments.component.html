@@ -1,6 +1,6 @@
 <div style="padding-left: 60px; padding-right: 60px">
 <h1>My Apartments</h1>
-<table class="table products-table">
+<table class="table products-table" style="margin-top: 20px">
   <tr>
     <th>Address</th>
     <th>Description</th>
@@ -8,7 +8,8 @@
     <th class="delete-column"></th>
   </tr>
   <tr *ngFor="let apartment of apartments">
-    <td><a [routerLink]="['edit', apartment.Id]">{{apartment.Address}}</a></td>
+    <!--<td><a [routerLink]="['edit', apartment.Id]">{{apartment.Address}}</a></td>-->
+    <td>{{apartment.Address}}</td>
     <td>{{apartment.Description}}</td>
     <td>{{apartment.Price | currency:'ILS':true:'1.2-2'}}</td>
     <td><a (click)="deleteApartment(apartment.Id)" class="btn btn-xs btn-danger">Delete</a></td>

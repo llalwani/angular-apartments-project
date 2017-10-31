@@ -78,6 +78,7 @@ export class AddApartmentComponent implements OnInit {
       hasParking: false,
       hasAirConditining: false,
       hasFurniture: false,
+      SellerPhoneNummber: '',
       Images: []
     };
   }
