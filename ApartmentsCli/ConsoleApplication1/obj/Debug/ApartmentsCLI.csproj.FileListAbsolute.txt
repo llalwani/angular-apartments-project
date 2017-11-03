@@ -1,0 +1,13 @@
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\RestSharp.dll
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\WebDriver.dll
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\RestSharp.xml
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\WebDriver.xml
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ApartmentsCLI.csprojResolveAssemblyReference.cache
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Saif\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Saif\Documents\Visual Studio 2015\Projects\Web\ApartmentsCli\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Saif\Documents\Visual Studio 2015\Projects\Web\ApartmentsCli\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Saif\Documents\Visual Studio 2015\Projects\Web\ApartmentsCli\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
