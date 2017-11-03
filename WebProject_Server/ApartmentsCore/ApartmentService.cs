@@ -110,14 +110,89 @@ namespace ApartmentsCore
             }
         }
 
-        public Apartment getApartment(int apartment_id)
+        //public Apartment getApartment(int apartment_id)
+        //{
+        //    using (var db = new ApartmentsAppContext())
+        //    {
+        //        return db.Apartments.Include("User").Include("Images").FirstOrDefault(x => x.Id == apartment_id);
+        //    }
+        //}
+
+
+        public void LoadApartmentsByFilter(ICollection<Apartment> apartments, string address, double price_from, double price_to)
         {
             using (var db = new ApartmentsAppContext())
             {
-                return db.Apartments.Include("User").Include("Images").FirstOrDefault(x => x.Id == apartment_id);
+                // if two fields missing search by the thrid
+                if (String.IsNullOrEmpty(address) && price_from == 0)
+                {
+                    IQueryable<Apartment> query = db.Apartments.Include("User").Include("Images").Where(apt => apt.Price <= price_to);
+                    foreach (var apartment in query)
+                    {
+                        apartments.Add(apartment);
+                    }
+                    return;
+                }
+
+                if (String.IsNullOrEmpty(address) && price_to == 0)
+                {
+                    IQueryable<Apartment> query = db.Apartments.Include("User").Include("Images").Where(apt => apt.Price >= price_from);
+                    foreach (var apartment in query)
+                    {
+                        apartments.Add(apartment);
+                    }
+                    return;
+                }
+
+                if (price_from == 0 && price_to == 0)
+                {
+                    IQueryable<Apartment> query = db.Apartments.Include("User").Include("Images").Where(apt => apt.Address.Contains(address));
+                    foreach (var apartment in query)
+                    {
+                        apartments.Add(apartment);
+                    }
+                    return;
+                }
+                // if one field missing search by the two
+                if (String.IsNullOrEmpty(address))
+                {
+                    IQueryable<Apartment> query = db.Apartments.Include("User").Include("Images").Where(apt => apt.Price >= price_from && apt.Price <= price_to);
+                    foreach (var apartment in query)
+                    {
+                        apartments.Add(apartment);
+                    }
+                    return;
+                }
+
+                if (price_from == 0)
+                {
+                    IQueryable<Apartment> query = db.Apartments.Include("User").Include("Images").Where(apt => apt.Price <= price_to && apt.Address.Contains(address));
+                    foreach (var apartment in query)
+                    {
+                        apartments.Add(apartment);
+                    }
+                    return;
+                }
+
+                if (price_to == 0)
+                {
+                    IQueryable<Apartment> query = db.Apartments.Include("User").Include("Images").Where(apt => apt.Price >= price_from && apt.Address.Contains(address));
+                    foreach (var apartment in query)
+                    {
+                        apartments.Add(apartment);
+                    }
+                    return;
+                }
+
+                //if all fields filled
+                IQueryable<Apartment> query1 = db.Apartments.Include("User").Include("Images").Where(apt => apt.Price >= price_from && apt.Price <= price_to && apt.Address.Contains(address));
+                foreach (var apartment in query1)
+                {
+                    apartments.Add(apartment);
+                }
+                return;
             }
         }
-
         public List<Apartment> LoadMyApartments(string username)
         {
             using (var db = new ApartmentsAppContext())

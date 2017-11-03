@@ -6,6 +6,7 @@ import {Router} from "@angular/router";
 import {IUser} from "./user";
 import {Subject} from "rxjs/Subject";
 import {environment} from "../../environments/environment";
+
 @Injectable()
 export class AuthService {
 
@@ -24,7 +25,7 @@ export class AuthService {
         // update app.component component with the new user
         this.subject.next(JSON.stringify(user));
       }
-    }).catch(this.handleError);;
+    }).catch(this.handleError);
   }
 
   register(model: IUser) {

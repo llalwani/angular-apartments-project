@@ -39,7 +39,7 @@ namespace WebProject.Controllers
                 var s = new ApartmentService();
                 s.RegisterUser(user);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return Conflict();
             }

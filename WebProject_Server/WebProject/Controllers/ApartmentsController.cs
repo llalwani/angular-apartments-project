@@ -15,23 +15,39 @@ namespace WebProject.Controllers
 {
     public class ApartmentsController : ApiController
     {
+        //[HttpGet, Route("api/apartments")]
+        //public IEnumerable<Apartment> Get()
+        //{
+        //    var s = new ApartmentService();
+        //    var m = new List<Apartment>();
+
+        //    s.LoadApartments(m);
+        //    return m;
+        //}
+
         [HttpGet, Route("api/apartments")]
-        public IEnumerable<Apartment> Get()
+        public IEnumerable<Apartment> Get([FromUri]SearchModel searchModel)
         {
             var s = new ApartmentService();
             var m = new List<Apartment>();
 
-            s.LoadApartments(m);
+            if (searchModel == null || (searchModel.Address == null && searchModel.Price_from == 0 && searchModel.Price_to == 0))
+            {
+                s.LoadApartments(m);
+                return m;
+            }
+
+            s.LoadApartmentsByFilter(m, searchModel.Address, searchModel.Price_from, searchModel.Price_to);
             return m;
         }
 
-        [HttpGet, Route("api/apartments")]
-        public Apartment Get(int id)
-        {
-            var s = new ApartmentService();
-            var m = new List<Apartment>();
-            return s.getApartment(id);
-        }
+        //[HttpGet, Route("api/apartments")]
+        //public Apartment Get(int id)
+        //{
+        //    var s = new ApartmentService();
+        //    var m = new List<Apartment>();
+        //    return s.getApartment(id);
+        //}
 
         //[HttpPost, Route("api/apartments")]
         //public IHttpActionResult Post(ApartmentWithUserModel apartment)
