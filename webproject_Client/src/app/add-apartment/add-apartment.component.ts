@@ -32,9 +32,6 @@ export class AddApartmentComponent implements OnInit {
   ngOnInit() {
   }
 
-  public clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
 
   addApartment() {
     this.loading = true;

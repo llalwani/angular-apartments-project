@@ -22,11 +22,11 @@ export class AddApartmentService {
     imageForm.append('image', image);
     imageForm.append('username', this.currentUser);
     imageForm.append('apartment', JSON.stringify(_.cloneDeep(model)));
-    let newModel: any = {
-      username: this.currentUser,
-      apartment: _.cloneDeep(model),
-      image: image
-    };
+    // let newModel: any = {
+    //   username: this.currentUser,
+    //   apartment: _.cloneDeep(model),
+    //   image: image
+    // };
     return this._httpClient.post(this.url, imageForm)
       .map((result: IApartment) => {
         return result;

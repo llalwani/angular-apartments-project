@@ -7,7 +7,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ApartmentsListComponent } from './apartments-list/apartments-list.component';
-import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
+import {ApartmentDetailsComponent, DialogOverviewExampleDialog} from './apartment-details/apartment-details.component';
 
 import {routing} from './app.routing'
 import {AuthGuard} from "./guards/auth.guard";
@@ -18,7 +18,8 @@ import {ApartmentsListService} from "./apartments-list/apartments-list-service.s
 import { AlertComponent } from './alert/alert.component';
 import {AlertService} from "./alert/alert.service";
 import { MyApartmentsComponent } from './my-apartments/my-apartments.component';
-import {MatButtonModule, MatCheckboxModule, MatExpansionModule, MatProgressBarModule, MatTabsModule, MatSortModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatExpansionModule, MatProgressBarModule, MatTabsModule, MatSortModule,
+        MatDialogModule} from '@angular/material';
 import {MyApartmentsService} from "./my-apartments/my-apartments.service";
 import { AgmCoreModule } from '@agm/core';
 
@@ -35,8 +36,10 @@ import {ApartmentDetailsService} from "./apartment-details/apartment-details.ser
     RegisterComponent,
     AddApartmentComponent,
     AlertComponent,
-    MyApartmentsComponent
+    MyApartmentsComponent,
+    DialogOverviewExampleDialog
   ],
+  entryComponents: [DialogOverviewExampleDialog],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
@@ -50,6 +53,7 @@ import {ApartmentDetailsService} from "./apartment-details/apartment-details.ser
     MatCheckboxModule,
     MatTabsModule,
     MatSortModule,
+    MatDialogModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB781ud16z5awfrXshMx_VW6FElATz8uxU'
     })

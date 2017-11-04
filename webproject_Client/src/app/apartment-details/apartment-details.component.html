@@ -70,7 +70,8 @@
             <div class='col-md-3'>Picture:</div>
             <div class="responsive">
               <div class="gallery">
-            <img [src]="sanitizedImageData"/>
+                  <img [src]="sanitizedImageData"/>
+                <button class="btn btn-default"(click)="openDialog()">Click to enlarge</button>
               </div>
             </div>
 
