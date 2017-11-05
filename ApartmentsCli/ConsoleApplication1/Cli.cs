@@ -71,22 +71,9 @@ namespace ConsoleApplication1
                     break;
 
                 default:
-                    ExportToCSV(null);
                     Console.WriteLine("Unknown Command! type commands to get the commands");
                     break;
             }
-        }
-
-        public void ExportToCSV(ApartmentModel apartment)
-        {
-            var csv = new StringBuilder();
-            string filePath = @"e:\test.csv";
-            string first = "A";
-            string second = "B"; 
-            var newLine = string.Format("\"{0}\",\"{1}\"", first, second);
-            csv.AppendLine(newLine);
-            File.WriteAllText(filePath, csv.ToString());
-
         }
     }
 }

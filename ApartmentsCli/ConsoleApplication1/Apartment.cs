@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
+using System.IO;
+
 namespace ConsoleApplication1
 {
 
@@ -45,7 +47,7 @@ namespace ConsoleApplication1
             return client.Execute<List<ApartmentModel>>(request).Data;
         }
 
-        public void Print_Apartments(ApartmentsSearchType type, double price_from=0, double price_to=0,string address="")
+        public void Print_Apartments(ApartmentsSearchType type, double price_from = 0, double price_to = 0, string address = "")
         {
             List<ApartmentModel> apartments = new List<ApartmentModel>();
             switch (type)
@@ -62,7 +64,7 @@ namespace ConsoleApplication1
                     apartments = GetApartmentsByAddress(address);
                     break;
             }
-             
+
             if (apartments.Count == 0)
             {
                 Console.WriteLine("Oops, No apartments found to display");
@@ -73,6 +75,8 @@ namespace ConsoleApplication1
             {
                 PrintApartment(apt);
             }
+
+            ExportToCSV(apartments);
         }
 
         public void PrintApartment(ApartmentModel apartment)
@@ -83,10 +87,25 @@ namespace ConsoleApplication1
             Console.WriteLine(apartment.Description);
             Console.WriteLine("Price:");
             Console.WriteLine(apartment.Price);
-            string s = string.Format("Has Furnature: {0} Has Parking: {1} Has Air Conditining: {2}", apartment.hasFurniture, apartment.hasParking, apartment.hasAirConditining);
-            Console.WriteLine(s);
+            Console.WriteLine(string.Format("Has Furnature: {0} Has Parking: {1} Has Air Conditining: {2}", apartment.hasFurniture, apartment.hasParking, apartment.hasAirConditining));
             Console.WriteLine("Contact Phone number:");
             Console.WriteLine(apartment.SellerPhoneNummber);
+            Console.WriteLine("----------------------------------------");
+        }
+
+        public void ExportToCSV(List<ApartmentModel> apartments)
+        {
+            var csv = new StringBuilder();
+            string filePath = @"e:\apartments.csv";
+            var newLine = string.Format("\"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", "Address", "Price", "Description", "Has Furnature", "Has Parking", "Has Air Conditing", "Contact Phone Number");
+            csv.AppendLine(newLine);
+            foreach (var Apt in apartments)
+            {
+                newLine = string.Format("\"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", Apt.Address, Apt.Price, Apt.Description, Apt.hasFurniture, Apt.hasParking, Apt.hasAirConditining, Apt.SellerPhoneNummber);
+                csv.AppendLine(newLine);
+            }
+            File.WriteAllText(filePath, csv.ToString());
+
         }
     }
 }
