@@ -73,6 +73,7 @@ export class ApartmentsListComponent implements OnInit {
       m.lat = apartment.Lat;
       m.lng = apartment.Lng;
       m.label = apartment.Price.toString();
+      m.label = m.label.replace(/000/g,"K");
       this.markers.push(m);
     });
   }

@@ -77,9 +77,9 @@ namespace WebProject.Controllers
             string username = HttpContext.Current.Request.Params["username"];
             string apartment = HttpContext.Current.Request.Params["apartment"];
             Apartment apartmentToSend = JsonConvert.DeserializeObject<Apartment>(apartment);
+            apartmentToSend.Images = new List<Image>();
             if (httpRequest.Files.Count > 0)
             {
-                apartmentToSend.Images = new List<Image>();
                 foreach (string file in httpRequest.Files)
                 {
                     var postedFile = httpRequest.Files[file];
