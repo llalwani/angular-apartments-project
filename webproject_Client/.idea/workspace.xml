@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c54ac0-0990-4b2e-8133-cc08738431e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ApartmentsCli/.vs/ApartmentsCliProject/v14/.suo" afterPath="$PROJECT_DIR$/../ApartmentsCli/.vs/ApartmentsCliProject/v14/.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/.vs/WebProject_Server/v14/.suo" afterPath="$PROJECT_DIR$/../WebProject_Server/.vs/WebProject_Server/v14/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/bin/Debug/ApartmentsCore.dll" afterPath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/bin/Debug/ApartmentsCore.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/bin/Debug/ApartmentsCore.pdb" afterPath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/bin/Debug/ApartmentsCore.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/obj/Debug/ApartmentsCore.dll" afterPath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/obj/Debug/ApartmentsCore.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/obj/Debug/ApartmentsCore.pdb" afterPath="$PROJECT_DIR$/../WebProject_Server/ApartmentsCore/obj/Debug/ApartmentsCore.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext.mdf" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext.mdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext_log.ldf" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/App_Data/ApartmentsCore.ApartmentsAppContext_log.ldf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/ApartmentsCore.dll" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/ApartmentsCore.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/ApartmentsCore.pdb" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/ApartmentsCore.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/WebProject.dll" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/WebProject.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/WebProject.pdb" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/bin/WebProject.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/obj/Debug/WebProject.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/obj/Debug/WebProject.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/obj/Debug/WebProject.dll" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/obj/Debug/WebProject.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/obj/Debug/WebProject.pdb" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/obj/Debug/WebProject.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WebProject_Server/WebProject/Controllers/ApartmentsController.cs" afterPath="$PROJECT_DIR$/../WebProject_Server/WebProject/Controllers/ApartmentsController.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts" afterPath="$PROJECT_DIR$/src/app/apartments-list/apartments-list.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -270,7 +254,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,6 +304,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,12 +381,13 @@
       <workItem from="1509786042387" duration="8070000" />
       <workItem from="1509874541890" duration="2343000" />
       <workItem from="1509907068759" duration="4000" />
-      <workItem from="1510168473990" duration="276000" />
+      <workItem from="1510168473990" duration="826000" />
+      <workItem from="1510475640990" duration="609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218584000" />
+    <option name="totallyTimeSpent" value="219743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
